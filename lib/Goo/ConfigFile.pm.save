@@ -1,0 +1,325 @@
+package Goo::ConfigFile;
+
+###############################################################################
+# Nigel Hamilton
+#
+# Copyright Nigel Hamilton 2005
+# All Rights Reserved
+#
+# Author:       Nigel Hamilton
+# Filename:     Goo::ConfigFile.pm
+# Description:  Goo Config - parse .goo files. Based loosely on .ini files.
+#               We want # comments and fields = values
+#
+# Date          Change
+# -----------------------------------------------------------------------------
+# 30/07/2005    Realised this was not going to be good enough
+# 17/10/2005    Added method: getProgram
+#
+###############################################################################
+
+use strict;
+
+use File::Find;
+use Goo::List;
+use Goo::Object;
+use Data::Dumper;
+use Goo::Prompter;
+use Goo::FileUtilities;
+use base qw(Goo::Object);
+
+my $GOO_ROOT = "$ENV{GOOBASE}/things/goo";
+
+
+###############################################################################
+#
+# new - return a goo_config_file
+#
+###############################################################################
+
+sub new {
+
+    my ($class, $filename) = @_;
+
+    # strip the path
+    $filename =~ s/.*\///;
+
+    my $this = $class->SUPER::new();
+
+    unless ($filename =~ /\.goo$/) {
+        die("Invalid Goo config file. $filename must end with .goo.");
+    }
+
+    my $full_path = $GOO_ROOT . '/' . $filename;
+
+    unless (-e $full_path) {
+        Goo::Prompter::say("No Goo configuration file found for $filename.");
+        Goo::Prompter::say("To make a new type of Thing enter: goo -m $filename.");
+        exit;
+    }
+
+    $this->parse($full_path);
+
+    return $this;
+
+}
+
+
+###############################################################################
+#
+# get_action_handler - return the handler for this command
+#
+###############################################################################
+
+sub get_action_handler {
+
+    my ($this, $command) = @_;
+
+    # return the action handler for this command
+    return $this->{commands}->{$command};
+
+}
+
+
+###############################################################################
+#
+# has_locations - does it have any
+#
+###############################################################################
+
+sub has_locations {
+
+    my ($this) = @_;
+
+    # return the locations for this Thing!
+    return ref($this->{locations}) eq "ARRAY";
+
+}
+
+
+###############################################################################
+#
+# get_locations - return a list of all the locations of the config file
+#
+###############################################################################
+
+sub get_locations {
+
+    my ($this) = @_;
+
+    # return the locations for this Thing!
+    return @{ $this->{locations} }
+        if ($this->has_locations());
+
+    # other return nothing
+    return undef;
+
+}
+
+###############################################################################
+#
+# parse - slurp in a file and parse it
+#
+###############################################################################
+
+sub parse {
+
+	my ($this, $full_path) = @_;
+
+	my @locations;
+
+    my $location_finder = sub {    									# define anonymous sub 
+																	# for File::Find
+        my $subdir = $File::Find::name;    							# memoize current file
+        push @locations, $subdir if (-d $subdir);    				# add if directory
+
+    };
+
+    # parse the config file line by line
+    for my $line (Goo::FileUtilities::get_file_as_lines($full_path)) {
+        next
+            if ($line =~ /^\s*\#/ or                                  # skip commented out or
+                $line =~ /^\s*$/);                                                 # empty lines
+
+        # strip whitespace
+        $line =~ s/\s*=\s*/=/;
+        $line =~ s/^\s+//;
+        $line =~ s/\s+$//;
+
+        # split out key value pairs
+        my ($field, $value) = split(/=/, $line);
+
+        if ($field =~ /location/) {
+
+            # field is a location entry
+            $value = "$ENV{GOOBASE}/$value"
+                if ($value !~ /^\//);    					# prepend GOOBASE if relative path
+            $value = $ENV{GOOBASE} if ($value eq '/');    	# put in GOOBASE if "root" given
+            &find($location_finder, $value);     			# recursive directory finder
+
+        } elsif ($field =~ /\[(.)\]/) {                   	# field is a command
+            my $letter = $1;                              	# match the command letter
+
+            if ($letter !~ /[A-Z\d]/) {
+                die("Invalid command [$letter] in config file: $full_path. Commands must be uppercase."
+                   );
+            }
+
+            # [E]dit = $this->{actions}->{E}->{command} = "[E]dit";
+            $this->{actions}->{$letter}->{command} = $field;
+
+            # [E]dit = $this->{actions}->{E}->{action}  = "ProgramEditor";
+            $this->{actions}->{$letter}->{action} = $value;
+
+            # remember the full command string too
+            $this->{commands}->{$field} = $value;
+
+        } else {
+            $this->{$field} = $value;
+        }
+    }
+
+	# make sure we only have unique locations
+	if ($this->has_locations()) {
+		Goo::Prompter::trace("Locations found");
+
+		Goo::Prompter::dump($this->{locations});
+
+    	my @unique_list = Goo::List::get_unique(@{$this->{locations}});
+
+		$this->{locations} = @unique_list;
+		Goo::Prompter::dump($this->{locations});
+
+	}
+
+}
+
+
+###############################################################################
+#
+# write - send a hash to the disk
+#
+###############################################################################
+
+sub write {
+
+    my ($filename, $hash) = @_;
+
+    my $string;
+
+    for my $key (keys %$hash) {
+
+        $string .= $key . "\t\t\t" . $hash->{$key} . "\n";
+
+    }
+
+    Goo::FileUtilities::write_file($filename, $string);
+
+}
+
+###############################################################################
+#
+# get_program - return the program that handles an action
+#
+###############################################################################
+
+sub get_program {
+
+    my ($this, $letter) = @_;
+
+    return $this->{actions}->{$letter}->{action};
+
+}
+
+
+###############################################################################
+#
+# get_commands - return all the commands for this config file
+#
+###############################################################################
+
+sub get_commands {
+
+    my ($this) = @_;
+
+    return keys %{ $this->{commands} };
+
+}
+
+
+###############################################################################
+#
+# has_table - does it have a database "table"
+#
+###############################################################################
+
+sub has_table {
+
+    my ($this) = @_;
+
+    # has a table field been defined for this Thing?
+    return exists $this->{table};
+
+}
+
+1;
+
+__END__
+
+=head1 NAME
+
+Goo::ConfigFile - Goo Config - parse .goo files. Based loosely on .ini files.
+
+=head1 SYNOPSIS
+
+use Goo::ConfigFile;
+
+=head1 DESCRIPTION
+
+
+
+=head1 METHODS
+
+=item new
+
+return a goo_config_file
+
+=item get_action_handler
+
+return the handler for this command
+
+=item has_locations
+
+does it have any
+
+=item get_locations
+
+return a list of all the locations of the config file
+
+=item parse
+
+slurp in a file and parse it
+
+=item write
+
+send a hash to the disk
+
+=item get_program
+
+return the program that handles an action
+
+=item get_commands
+
+return all the commands for this config file
+
+=item has_table
+
+does it have a database "table"
+
+
+=head1 AUTHOR
+
+Nigel Hamilton <nigel@trexy.com>
+
+=head1 SEE ALSO
+
