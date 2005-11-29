@@ -24,8 +24,6 @@ package Goo::Thing;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Cwd;
 use Goo::Object;
 use Data::Dumper;

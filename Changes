@@ -1,8 +1,18 @@
-Revision history for Goo
+The Goo Changelog
+=================
+
+
+0.04	2005-11-27
+	initial version to live in SVN repository
+	for detailed changes see commit comments in SVN repository
+
+0.03	2005-11-25
+	small bugfix in Makefile.PL
+
+0.02    2005-11-24
+	pre-RCS/CVS/SVN Version unified source tree
 
 0.01    2005-11-23
         First version, released on an unsuspecting world.
 
-0.02    2005-11-24
-	pre-RCS/CVS/SVN Version unified source tree
 

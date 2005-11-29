@@ -22,8 +22,6 @@ package Goo::Thing::pm::Perl5ThereDocManager;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Loader;
 use Goo::Prompter;
 use Goo::ThereDocManager;

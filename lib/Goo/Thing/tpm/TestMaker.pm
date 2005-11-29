@@ -65,7 +65,8 @@ sub format_signature {
 
 sub create_test_for_module {
 
-    my ($this, $full_path) = @_;
+    my $this      = shift;
+    my $full_path = shift;
 
     # match the path and filename
     $full_path =~ m/(.*)\/(.*)$/;
@@ -85,7 +86,7 @@ sub create_test_for_module {
     my $test_module_path = $location . "/test";
 
     unless (-e $test_module_path) {
-        `mkdir $test_module_path`;
+        mkdir $test_module_path;
     }
 
     $test_module_path .= "/" . $test_module_filename;

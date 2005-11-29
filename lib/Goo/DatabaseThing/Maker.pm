@@ -19,8 +19,6 @@ package Goo::DatabaseThing::Maker;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Prompter;
 use Goo::Database;

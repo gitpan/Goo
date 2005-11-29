@@ -22,8 +22,6 @@ package Goo::DatabaseObject;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Database;
 

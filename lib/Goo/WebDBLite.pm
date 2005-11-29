@@ -47,13 +47,13 @@ my $datadirectory = "/home/search/web/webdb/";
 # master database hash
 our $db		  = {};
 
-
-my $type_locations = { formtemplate  => "$ENV{GOOBASE}/things/frm",
-		       page	     => "$ENV{GOOBASE}/things/page",
-		       email	     => "$ENV{GOOBASE}/things/email",
-		       emailtemplate => "$ENV{GOOBASE}/things/email",
-		       settings	     => "$ENV{GOOBASE}/things/settings",
-		       template	     => "$ENV{GOOBASE}/things/tpl" };
+my $goobase = "$ENV{HOME}/.goo";
+my $type_locations = { formtemplate  => "$goobase/things/frm",
+		       page	     => "$goobase/things/page",
+		       email	     => "$goobase/things/email",
+		       emailtemplate => "$goobase/things/email",
+		       settings	     => "$goobase/things/settings",
+		       template	     => "$goobase/things/tpl" };
 
 
 ##############################################################################

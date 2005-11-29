@@ -21,8 +21,6 @@ package Goo::Thing::bug::Fixer;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Prompter;
 use Goo::TeamManager;

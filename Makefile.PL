@@ -6,7 +6,7 @@ use 5.006;                   # this module requires Perl 5.6.0
 
 WriteMakefile(
     NAME                => 'Goo',
-    AUTHOR              => 'Nigel Hamilton <nigel@turbo10.com>',
+    AUTHOR              => 'Nigel Hamilton <nigel@trexy.com>',
     VERSION_FROM        => 'lib/Goo.pm',
     PL_FILES            => {},
     EXE_FILES           => [ 'bin/goo.pl' ],

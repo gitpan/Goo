@@ -23,8 +23,6 @@ package Goo::Shell;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo;
 use Goo::Prompter;
 use Goo::TypeManager;

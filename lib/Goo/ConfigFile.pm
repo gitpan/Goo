@@ -28,7 +28,7 @@ use Goo::Prompter;
 use Goo::FileUtilities;
 use base qw(Goo::Object);
 
-my $GOO_ROOT = "$ENV{GOOBASE}/things/goo";
+my $GOO_ROOT = "$ENV{HOME}/.goo/things";
 
 
 ###############################################################################
@@ -50,10 +50,10 @@ sub new {
         die("Invalid Goo config file. $filename must end with .goo.");
     }
 
-    my $full_path = $GOO_ROOT . '/' . $filename;
+    my $full_path = $GOO_ROOT . '/goo/' . $filename;
 
     unless (-e $full_path) {
-        Goo::Prompter::say("No Goo configuration file found for $filename.");
+        Goo::Prompter::say("No Goo configuration file found for $fullpath.");
         Goo::Prompter::say("To make a new type of Thing enter: goo -m $filename.");
         exit;
     }
@@ -154,9 +154,9 @@ sub parse {
         if ($field =~ /location/) {
 
             # field is a location entry
-            $value = "$ENV{GOOBASE}/$value"
-                if ($value !~ /^\//);    # prepend GOOBASE if relative path
-            $value = $ENV{GOOBASE} if ($value eq '/');    # put in GOOBASE if "root" given
+            $value = "$ENV{HOME}/.goo/$value"
+                if ($value !~ /^\//);    # prepend ~/.goo if relative path
+            $value = "$ENV{HOME}/.goo" if ($value eq '~');    # put in ~/.goo if "tilde" given
             &find($location_finder, $value);              # recursive directory finder
 
         } elsif ($field =~ /\[(.)\]/) {                   # field is a command

@@ -23,7 +23,6 @@ use strict;
 use Goo::Thing;
 use Goo::FileUtilities;
 
-
 use base qw(Goo::Thing);
 
 

@@ -25,8 +25,6 @@ package TestRunner;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Object;
 use Prompter;
 use TestMaker;

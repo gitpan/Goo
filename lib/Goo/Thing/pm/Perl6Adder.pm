@@ -26,13 +26,11 @@ package Goo::Thing::pm::Perl6Adder;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Prompter;
 use Goo::Thing::pm::PerlCoder;
 use Goo::Thing::pm::MethodMaker;
-	
+
 use base qw(Goo::Object);
 
 

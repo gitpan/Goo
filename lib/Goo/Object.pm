@@ -23,7 +23,6 @@ package Goo::Object;
 
 use strict;
 
-
 ##############################################################################
 #
 # new - instantiate an object
@@ -36,10 +35,9 @@ sub new {
 
     my $this = {};
 
-    bless($this, $class);
+    bless( $this, $class );
 
 }
-
 
 ##############################################################################
 #
@@ -49,14 +47,13 @@ sub new {
 
 sub add_fields {
 
-    my ($this, $fields) = @_;
+    my ( $this, $fields ) = @_;
 
-    if (ref($fields) eq "HASH") {
-        %$this = (%$this, %$fields);
+    if ( ref($fields) eq "HASH" ) {
+        %$this = ( %$this, %$fields );
     }
 
 }
-
 
 ##############################################################################
 #
@@ -66,12 +63,11 @@ sub add_fields {
 
 sub has {
 
-    my ($this, $attribute) = @_;
+    my ( $this, $attribute ) = @_;
 
-    return exists($this->{$attribute});
+    return exists( $this->{$attribute} );
 
 }
-
 
 ##############################################################################
 #
@@ -87,7 +83,6 @@ sub get_type {
 
 }
 
-
 ##############################################################################
 #
 # to_string - return a string representation of this class
@@ -100,7 +95,7 @@ sub to_string {
 
     my $string = "[" . ref($this) . "]";
 
-    foreach my $key (keys %$this) {
+    foreach my $key ( keys %$this ) {
         $string .= " $key = $this->{$key} |";
 
     }
@@ -108,7 +103,6 @@ sub to_string {
     return $string . "\n\n";
 
 }
-
 
 ##############################################################################
 #
@@ -121,10 +115,11 @@ sub to_htmlstring {
     my ($this) = @_;
 
     my $string =
-        "<p><table width='95%' border ='1'><tr><td colspan = '2'>" . ref($this) .
-        "</td><td></td></tr>";
+        "<p><table width='95%' border ='1'><tr><td colspan = '2'>"
+      . ref($this)
+      . "</td><td></td></tr>";
 
-    foreach my $key (keys %$this) {
+    foreach my $key ( keys %$this ) {
 
         $this->{$key} =~ s/\</&lt;/g;
         $this->{$key} =~ s/\>/&gt;/g;
@@ -136,9 +131,7 @@ sub to_htmlstring {
 
 }
 
-
 1;
-
 
 __END__
 

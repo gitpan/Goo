@@ -48,8 +48,7 @@ sub run {
     unlink($last_error_file);
 
     # redirect STDERR to STDOUT
-    #my $results = `/usr/bin/perl -c $filename &2 > &1`;
-    my $results = `/usr/bin/perl -I$ENV{GOOBASE} -c $filename 2 &> $last_error_file`;
+    my $results = `/usr/bin/perl -I$ENV{HOME}/.goo -c $filename 2 &> $last_error_file`;
 
     # do we have any errors?
     if (-e $last_error_file) {

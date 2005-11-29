@@ -45,7 +45,7 @@ use Goo::LiteDatabase;
 
 use base qw(Goo::Object);
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 ###############################################################################
@@ -71,18 +71,18 @@ sub check_environment {
 
     # no database yet - let's make one
     # check if the ~/.goo directory is present?
-    if (!-d $database_directory) {    # if there is no directory
-        if (-e $database_directory) {    # but a file with the name .goo
+    if (!-d $database_directory) {    		# if there is no directory
+        if (-e $database_directory) {   	# but a file with the name .goo
             rename $database_directory, "$database_directory.wtf";    # move it
         }
 
-        #        mkdir $database_directory;      # make the directory
+        mkdir $database_directory;      # make the directory
 
         # so this is our 1st time invocation: copy files from skeletton
-        copy(\1, '/usr/lib/Goo/things', $database_directory);
+        copy(\1, '/usr/lib/Goo/*', $database_directory);
     }
 
-    close DATA if (open DATA, ">>$database_file");                    # make the db file ("touch")
+    close DATA if (open DATA, ">>$database_file"); # make the db file ("touch")
 
     # connect to the database for the first time
     Goo::LiteDatabase::get_connection($database_file);
@@ -106,7 +106,7 @@ sub do_action {
     # special exception for makers - need to remove this later
     if ($action =~ /M/i) {
 
-        $filename = "$ENV{GOOBASE}/things/goo/$filename";
+        $filename = "$ENV{HOME}/.goo/things/goo/$filename";
 
         if (-e $filename) {
             return

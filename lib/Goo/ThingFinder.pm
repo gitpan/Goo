@@ -21,8 +21,6 @@ package Goo::ThingFinder;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::TypeManager;
 use Text::FormatTable;
 

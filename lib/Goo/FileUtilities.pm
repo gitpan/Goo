@@ -87,25 +87,16 @@ sub get_short_file_list {
 
 sub get_file_list {
 
-    my ($directory) = @_;
+    my $directory = shift;
 
     # restore line mode
     $/ = "\n";
 
-    # a little bit dangerous - don't use where $directory is not trusted
-    my @files = `ls $directory`;
-
-    my @newfiles;
-
-    foreach my $file (@files) {
-        chomp($file);
-        push(@newfiles, $file);
-    }
-
-    # should really be doing this:
-    #	opendir(DIR, $directory);
-    #       files are relative not absolute
-    #       my @files = readdir(DIR);
+    # read in all files from directory like with `ls $directory`
+    opendir THISDIR, $directory;
+    my @newfiles = sort { lc $a cmp lc $b}
+                   grep !/^\./, readdir THISDIR;
+    closedir THISDIR;
 
     return @newfiles;
 

@@ -1,4 +1,12 @@
-Goo - sticking things together
+"The Goo" helps you stick "Things" together in your working environment.
+
+Things include Perl modules, Perl scripts, log files, javascripts, configuration files, 
+database tables, templates etc.
+
+The Goo records a "Trail" as you jump quickly from Thing to Thing in a simple, text-based 
+console. It remembers how you associate Things in your environment.
+
+Accelerate your work by quickly traversing the Trail of associations between Things. 
 
 
 INSTALLATION
@@ -13,11 +21,21 @@ To install this module, run the following commands:
 
 THINGS:
 
-Individual action handlers for Things are found in the ./Thing subdirectory.
+Each type of Thing has a ".goo" configuration file. 
 
-For example, the handlers relating to "pm" files (i.e., Perl modules) are
-found in: ./Goo/Thing/pm.
+The ".goo" configuration file lists all the locations where Things of this type can be found
+(e.g., directory, database) and the actions that can be performed on a Thing (e.g., [E]dit 
+= Editor.pm). 
 
+Perl modules, for example, have a ".pm" suffix so this type of Thing is defined in the "pm.goo"
+configuration file. The "pm.goo" file includes a list of directory locations where Perl modules
+can be found and a list of actions that can be performed on Perl modules. These actions relate
+to the "action handlers" that carry out the action (e.g., E[X]it = Exiter.pm).
+
+General action handlers are located in the top-level Goo/ directory (e.g., [Z]one -> Zone.pm)
+and Thing-specific action handlers are found in a Goo/Thing/ subdirectory based on suffix. 
+Perl modules, for example, use a special editor ([E]dit = Goo::Thing::pm::Editor.pm) and the
+action handler is located in the Goo/Thing/pm directory.
 
 SUPPORT AND DOCUMENTATION
 

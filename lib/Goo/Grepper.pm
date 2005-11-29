@@ -19,8 +19,6 @@ package Goo::Grepper;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Prompter;
 use File::Grep qw(fdo);
 
@@ -43,14 +41,13 @@ sub find_files {
         if ($line =~ qr/$pattern/ &&     # if any line in a filename matches $pattern AND
             $files[$file] =~ /([^\/]+)$/
             ) {                          # we can extract just the filename
-                                         #print "found match $1 \n";
+                                         # print "found match $1 \n";
             push @filenames, $1;         # push it to list of filenames
         }
         }
         @files;
 
     # print "found these filenames " . join("\n", @filenames);
-
     return @filenames;
 
 }

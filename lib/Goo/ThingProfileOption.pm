@@ -21,8 +21,6 @@ package Goo::ThingProfileOption;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Loader;
 use Goo::ProfileOption;
 

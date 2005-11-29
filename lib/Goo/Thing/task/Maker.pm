@@ -21,8 +21,6 @@ package Goo::Thing::task::Maker;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Header;
 use Goo::Prompter;

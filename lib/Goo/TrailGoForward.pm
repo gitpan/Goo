@@ -22,8 +22,6 @@ package Goo::TrailGoForward;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::LiteDatabase;
 use Goo::Thing::gml::Writer;

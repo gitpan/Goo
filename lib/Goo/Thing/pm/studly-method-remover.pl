@@ -1,5 +1,5 @@
 
-use lib $ENV{GOOBASE};
+
 use Goo::FileUtilities;
 
 my $perl_file = shift;

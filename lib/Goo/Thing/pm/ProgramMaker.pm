@@ -23,8 +23,6 @@ package Goo::Thing::pm::ProgramMaker;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Date;
 use Goo::Object;
 use Goo::Prompter;

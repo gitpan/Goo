@@ -20,8 +20,6 @@ package Goo::DatabaseProfileOption;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::ProfileOption;
 
 use base qw(Goo::ProfileOption);

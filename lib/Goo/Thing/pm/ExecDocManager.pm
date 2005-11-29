@@ -21,8 +21,6 @@ package Goo::Thing::pm::ExecDocManager;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Prompter;
 use Goo::FileUtilities;
 

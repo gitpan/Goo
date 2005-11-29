@@ -20,8 +20,6 @@ package GMLMaker;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Date;
 use Object;
 use Prompter;

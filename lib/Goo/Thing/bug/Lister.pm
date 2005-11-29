@@ -19,8 +19,6 @@ package Goo::Thing::bug::Lister;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Loader;
 use Goo::Profile;

@@ -19,8 +19,6 @@ package Goo::Thing::pm::Method;
 
 use strict;
 
-use lib "$ENV{'GOOBASE'}";
-
 use Goo::Object;
 use Goo::Template;
 use Goo::WebDBLite;

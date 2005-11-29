@@ -21,8 +21,6 @@ package Goo::ProfileOption;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Prompter;
 

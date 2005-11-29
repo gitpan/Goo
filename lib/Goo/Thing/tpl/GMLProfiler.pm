@@ -21,8 +21,6 @@ package GMLProfiler;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use GML;
 use Object;
 use Prompter;

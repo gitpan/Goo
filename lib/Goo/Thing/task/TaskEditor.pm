@@ -19,8 +19,6 @@ package Goo::Thing::task::Editor;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Object;
 use Prompter;
 use GooDatabase;

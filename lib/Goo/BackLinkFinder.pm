@@ -21,8 +21,6 @@ package Goo::BackLinkFinder;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Grepper;
 use Goo::TypeManager;
 

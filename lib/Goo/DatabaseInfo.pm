@@ -21,8 +21,6 @@ package Goo::DatabaseInfo;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::TableInfo;
 
 our $tables;

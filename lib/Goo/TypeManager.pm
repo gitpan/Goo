@@ -24,8 +24,6 @@ package Goo::TypeManager;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Data::Dumper;
 use Goo::ConfigFile;
 use Goo::FileUtilities;
@@ -35,7 +33,7 @@ use Goo::FileUtilities;
 my @GOO_TYPES;
 
 # where all the config files are stored
-my $GOO_CONFIG_ROOT = "$ENV{GOOBASE}/things/goo";
+my $GOO_CONFIG_ROOT = "$ENV{HOME}/.goo/things/goo";
 
 
 ###############################################################################
@@ -101,7 +99,7 @@ sub is_valid_thing {
 
 sub BEGIN {
 
-    my $GOO_CONFIG_ROOT = "$ENV{GOOBASE}/things/goo";
+    my $GOO_CONFIG_ROOT = "$ENV{HOME}/.goo/things/goo";
 
     @GOO_TYPES;
 

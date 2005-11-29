@@ -19,8 +19,6 @@ package TaskLister;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Object;
 use Profile;
 use Goo::Loader;

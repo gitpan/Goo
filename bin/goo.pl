@@ -8,17 +8,7 @@
 #
 # Author:       Nigel Hamilton
 # Filename:     goo.pl
-# Description:  GOO = Generate OO code
-#                   = Global Object Organiser
-#
-#               The Goo aims to automate all basic programming tasks
-#
-#               It is ....
-#
-#               * a code, test, template generator
-#               * a test suite manager
-#               * a code, test and template management system
-#
+# Description:  Stick Things together with The Goo
 #
 # Date          Change
 # -----------------------------------------------------------------------------
@@ -35,7 +25,7 @@
 
 use strict;
 
-use lib $ENV{GOOBASE};
+#use lib $ENV{GOOBASE};
 
 use Goo;
 use Goo::Shell;
@@ -45,7 +35,7 @@ my $clm = Goo::CommandLineManager->new(@ARGV);
 
 my $option = uc($clm->get_selected_option());    # default to Edit
 
-# thee filename is the last parameter!
+# the filename is the last parameter!
 my $filename = $clm->get_last_parameter();
 
 # get any remaining parameters
@@ -53,20 +43,20 @@ my @parameters = $clm->get_parameters();
 
 if ($option eq "Z") {
 
-    # [Z]one is the really the tail of the trail
+    # [Z]one is the tail of the trail
     $option   = "P";
     $filename = "tail.trail";
 
 } elsif ($option eq "O") {
 
     # Care[O]Meter is special view on Things we care about (care.goo)
+	# it helps answer the question: what do I do next?
     $option   = "O";
     $filename = "care.goo";
 
 }
 
 #print "$option ---- $filename \n";
-
 if ($option && $filename) {
 
     # pass the command line options to The Goo

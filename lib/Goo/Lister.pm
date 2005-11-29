@@ -21,8 +21,6 @@ package Goo::Lister;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Loader;
 use Goo::ConfigFile;
 

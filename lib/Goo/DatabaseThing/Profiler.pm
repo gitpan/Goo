@@ -22,8 +22,6 @@ package Goo::DatabaseThing::Profiler;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::List;
 use Goo::Object;
 use Goo::Header;

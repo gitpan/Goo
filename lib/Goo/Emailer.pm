@@ -28,8 +28,6 @@ package Goo::Emailer;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 ###############################################################################
 #
 # send_email     -    send an email

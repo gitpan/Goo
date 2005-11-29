@@ -48,7 +48,7 @@ sub process {
     my $tidy_file = $filename . ".tdy";
 
     # call perltidy on the file
-    `perltidy -pro='$ENV{GOOBASE}/perltidyrc' $filename > $tidy_file`;
+    `perltidy -pro='$ENV{HOME}/.goo/perltidyrc' $filename > $tidy_file`;
 
     unless ( -e $tidy_file ) {
         Goo::Prompter::notify("perltidy failed to generate $tidy_file");

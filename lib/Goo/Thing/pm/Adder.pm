@@ -25,8 +25,6 @@ package Goo::Thing::pm::Adder;
 
 use strict;
 
-use lib $ENV{GOOBASE};
-
 use Goo::Object;
 use Goo::Prompter;
 use Goo::Thing::pm::PerlCoder;

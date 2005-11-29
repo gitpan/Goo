@@ -31,7 +31,7 @@ use Goo::TextEditor;
 
 use base qw(Goo::Object);
 
-my $GOO_ROOT = "$ENV{GOOBASE}/things/goo/";
+my $GOO_ROOT = "$ENV{HOME}/.goo/things/goo/";
 
 
 ###############################################################################
@@ -141,7 +141,7 @@ sub get_file_locations {
             if (Goo::Prompter::confirm("Create a new location $location?")) {
 
                 # may need to create a new directory
-                `/bin/mkdir $location`;
+                mkdir $location;
             }
         }
     }
