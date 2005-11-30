@@ -35,10 +35,10 @@ sub run {
 
     my ($this, $thing) = @_;
 
-	my $thing = Goo::TrailManager::go_back_one();
+	my $new_thing = Goo::TrailManager::go_back_one();
 
 	# go back!
-	$thing->do_action("B");
+	$new_thing->do_action("B");
 
 }
 

@@ -533,7 +533,11 @@ display sql statement useful for debugging
 
 =item execute_sql
 
-take a string and execute the sql return a hash of column headings and values
+take a string and execute the SQL return a hash of column headings and values
+
+=item prepare_sql
+
+take a string and prepare the SQL for later execution
 
 =item execute
 
@@ -588,7 +592,7 @@ return a list of column names for the table
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

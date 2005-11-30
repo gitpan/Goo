@@ -391,6 +391,26 @@ use Goo::TrailManager;
 
 keep the buffer small (thanks to miller's rule - 7 plus or minus 2)
 
+=item get_max_actionid
+
+return the id of the last action in the goo_trail
+
+=item get_thing
+
+return the Thing that was the target of actionid
+
+=item go_back_one
+
+return the Thing that was the target of the previous action
+
+=item go_forward_one
+
+return the Thing that was the target of the next action
+
+=item reset_last_action
+
+set the actionid of the last action to max_actionid
+
 =item find_context
 
 find the most recent goo context for the current thing

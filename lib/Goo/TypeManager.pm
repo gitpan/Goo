@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::TypeManager;
 
 ###############################################################################
@@ -101,8 +99,6 @@ sub BEGIN {
 
     my $GOO_CONFIG_ROOT = "$ENV{HOME}/.goo/things/goo";
 
-    @GOO_TYPES;
-
     # look for all the Goo config files
     foreach my $config_filename (Goo::FileUtilities::get_file_list($GOO_CONFIG_ROOT . "/*.goo")) {
 
@@ -133,7 +129,6 @@ use Goo::TypeManager;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
@@ -153,7 +148,6 @@ is this a thing?
 =item BEGIN
 
 load the configuration for the goo
-
 
 =back
 

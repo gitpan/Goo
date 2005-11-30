@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Emailer;
 
 ###############################################################################
@@ -86,8 +84,6 @@ use Goo::Emailer;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
@@ -96,12 +92,15 @@ use Goo::Emailer;
 
 display the contents of the email to stdout, used for debugging
 
+=item send_email
+
+send an email
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

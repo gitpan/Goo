@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-package Tester;
+package Goo::Thing::tpm::Tester;
 
 ###############################################################################
 # Turbo10.com
@@ -8,30 +8,30 @@ package Tester;
 # Copyright Nigel Hamilton 2005
 # All Rights Reserved
 #
-# Author:   Nigel Hamilton
-# Filename: Tester.pm
+# Author:   	Nigel Hamilton
+# Filename: 	Goo::Thing::tpm::Tester.pm
 # Description:  Test things.
 #
-# Date      Change
+# Date      	Change
 # -----------------------------------------------------------------------------
 # 08/02/2005    Auto generated file
 # 08/02/2005    Needed an automate test generator and suite
-#       Encounter evil namespace clash when called "Test.pm" - decided
-#       to rename it "Tester.pm"
+#       		Encounter evil namespace clash when called "Test.pm" - decided
+#       		to rename it "Tester.pm"
 # 09/02/2005    Added prototype to test to stop slurpy array side effects
 #
 ###############################################################################
 
 use strict;
 
-use Maths;
-use Object;
+#use Maths;
+use Goo::Object;
 
 # use Logger;
-use Prompter;
+use Goo::Prompter;
 
 # Test isa Object
-use base qw(Object);
+use base qw(Goo::Object);
 
 
 ###############################################################################
@@ -66,7 +66,7 @@ sub do {
 
     my ($this, $expression) = @_;
 
-    Prompter::say("No tests to run");
+    Goo::Prompter::say("No tests to run");
 
 }
 
@@ -81,7 +81,8 @@ sub show {
 
     my ($this, $test_expression, $description) = @_;
 
-    Prompter::say("Test output is: <$test_expression>");
+    Goo::Prompter::say("Test output is: <$test_expression>");
+
 }
 
 
@@ -98,10 +99,10 @@ sub ok {
     # print $test_expression."\n";
 
     if ($test_expression) {
-        Prompter::say("ok - $description");
+        Goo::Prompter::say("ok - $description");
         $this->{passcount}++;
     } else {
-        Prompter::yell("[" . caller() . "] not ok - $description");
+        Goo::Prompter::yell("[" . caller() . "] not ok - $description");
         $this->{failcount}++;
     }
 
@@ -149,7 +150,7 @@ sub show_results {
 
     my ($this) = @_;
 
-    Prompter::say($this->get_results());
+    Goo::Prompter::say($this->get_results());
 
 }
 
@@ -172,10 +173,10 @@ sub get_results {
         return "No tests run.";
     }
 
-    my $percentage = Maths::get_percentage($passed, $total);
-    my $result = ($percentage == 100) ? "passed" : "failed";
+    #my $percentage = Maths::get_percentage($passed, $total);
+    #my $result = ($percentage == 100) ? "passed" : "failed";
 
-    return "$this->{name} $result: $percentage% - $passed passed, $failed failed.";
+    return "$this->{name} $result: $passed passed, $failed failed.";
 }
 
 

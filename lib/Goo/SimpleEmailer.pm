@@ -99,6 +99,9 @@ use Goo::SimpleEmailer;
 
 display the contents of the email to STDOUT, used for debugging
 
+=item send_email
+
+send an email
 
 =back
 

@@ -53,7 +53,7 @@ sub new {
     my $full_path = $GOO_ROOT . '/goo/' . $filename;
 
     unless (-e $full_path) {
-        Goo::Prompter::say("No Goo configuration file found for $fullpath.");
+        Goo::Prompter::say("No Goo configuration file found for $full_path.");
         Goo::Prompter::say("To make a new type of Thing enter: goo -m $filename.");
         exit;
     }
