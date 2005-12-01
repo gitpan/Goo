@@ -133,8 +133,7 @@ return a table of signatures
 
 =item run
 
-generate a profile of a program
-
+generate a profile of a Perl6 program
 
 =back
 

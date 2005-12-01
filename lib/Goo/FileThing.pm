@@ -134,7 +134,7 @@ use Goo::FileThing;
 
 =head1 DESCRIPTION
 
-
+A FileThing has a location in the file system.
 
 =head1 METHODS
 
@@ -146,11 +146,11 @@ constructor
 
 =item get_file
 
-get the full contents of the file
+return the full contents of the file
 
 =item get_full_path
 
-where is this thang located?
+return the full file system path
 
 =item get_filename
 
@@ -160,12 +160,11 @@ return the filename
 
 return the directory this thing is located in
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

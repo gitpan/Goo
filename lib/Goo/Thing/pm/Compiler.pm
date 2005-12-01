@@ -72,8 +72,8 @@ use Goo::Thing::pm::Compiler;
 
 =item run
 
-keep adding a thing to the program
-
+Delegate compiling a Perl program to either a Goo::Thing::pm::Perl6Compiler or 
+Goo::Thing::pm::Perl5Compiler.
 
 =back
 

@@ -1,6 +1,4 @@
 #!/usr/bin/perl
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Thing::pm::ProgramDeleter;
 
 ###############################################################################

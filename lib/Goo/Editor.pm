@@ -61,7 +61,7 @@ __END__
 
 =head1 NAME
 
-Goo::Editor - Edit a program interactively as fast as possible
+Goo::Editor - Call an external editor like vi or nano to edit a file.
 
 =head1 SYNOPSIS
 
@@ -69,7 +69,9 @@ use Goo::Editor;
 
 =head1 DESCRIPTION
 
+Wrap an external editor like vi or nano. 
 
+Editor is a top level action handler.
 
 =head1 METHODS
 
@@ -77,14 +79,13 @@ use Goo::Editor;
 
 =item run
 
-execute
-
+edit the file
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

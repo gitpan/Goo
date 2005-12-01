@@ -277,7 +277,14 @@ use Goo::ConfigFile;
 
 =head1 DESCRIPTION
 
+All Things have a corresponding ".goo" file. Perl modules for example have the configuration file "pm.goo". 
 
+All .goo files are stored in the user's home directory: ~/.goo/things/.
+
+A .goo configuration file includes a list of actions (e.g., E[X]it) and an action handler (e.g., Exiter.pm).
+For file-based Things the configuration file includes a "location" field(s) where Things of this type can be found.
+
+For database Things the configuration file includes a "table" field where Things of this type can be found.
 
 =head1 METHODS
 
@@ -289,23 +296,23 @@ return a goo_config_file
 
 =item get_action_handler
 
-return the handler for this command
+return the action handler for a given command
 
 =item has_locations
 
-does it have any
+does it have any directory locations?
 
 =item get_locations
 
-return a list of all the locations of the config file
+return a list of all the directory locations found in the config file
 
 =item parse
 
-slurp in a file and parse it
+slurp in a .goo config file and parse it
 
 =item write_to_file
 
-very simple writer for single key value additions
+very simplistic writer for single key value additions
 
 =item get_program
 
@@ -317,14 +324,13 @@ return all the commands for this config file
 
 =item has_table
 
-does it have a database "table"
-
+does it have a database "table"?
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

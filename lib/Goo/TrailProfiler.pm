@@ -112,18 +112,17 @@ use Goo::TrailProfiler;
 
 =item run
 
-show a trail of things
+show a Trail of Things
 
 =item add_trail_table
 
-return a table of package that this module uses
-
+return a list of Trail actions and Things
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

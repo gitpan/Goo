@@ -1,7 +1,7 @@
 package Goo::Date;
 
 ###############################################################################
-# turbo10.com - handle dates
+# Nigel Hamilton - handle dates
 #
 # Copyright Nigel Hamilton 2002
 # All Rights Reserved
@@ -336,7 +336,7 @@ use Goo::Date;
 
 =head1 DESCRIPTION
 
-
+Simple date handling methods.
 
 =head1 METHODS
 
@@ -403,7 +403,7 @@ synonym for get_current_date
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

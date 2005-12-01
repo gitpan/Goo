@@ -49,7 +49,7 @@ __END__
 
 =head1 NAME
 
-Goo::Perl6ModuleMaker - Command line utility for making module skeletons faster
+Goo::Perl6ModuleMaker - Command line utility for making Perl6 module skeletons faster
 
 =head1 SYNOPSIS
 
@@ -57,16 +57,13 @@ use Goo::Perl6ModuleMaker;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item run
 
-interface method
-
+Not implemented yet.
 
 =back
 

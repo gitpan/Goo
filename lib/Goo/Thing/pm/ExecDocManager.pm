@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Thing::pm::ExecDocManager;
 
 ###############################################################################
@@ -71,7 +69,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::ExecDocManager - Process ThereDocs embedded in Things
+Goo::Thing::pm::ExecDocManager - Like ThereDocs except they execute inline
 
 =head1 SYNOPSIS
 
@@ -79,7 +77,7 @@ use Goo::Thing::pm::ExecDocManager;
 
 =head1 DESCRIPTION
 
-
+This is an experimental idea. It means you can execute a one-liner while you're coding.
 
 =head1 METHODS
 
@@ -87,8 +85,7 @@ use Goo::Thing::pm::ExecDocManager;
 
 =item process
 
-given a string, look for there_docs and then do things if you find one!
-
+Given a string, look for an ExecDoc then execute the contents.
 
 =back
 

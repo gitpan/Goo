@@ -122,7 +122,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl5Profiler - Create a synopsis of a program / module / script
+Goo::Thing::pm::Perl5Profiler - Create a synopsis of a Perl5 program
 
 =head1 SYNOPSIS
 
@@ -142,8 +142,7 @@ return a table of methods
 
 =item run
 
-generate a profile of a program
-
+display a profile of a program
 
 =back
 

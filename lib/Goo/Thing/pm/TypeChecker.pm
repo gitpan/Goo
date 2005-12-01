@@ -63,16 +63,14 @@ use Goo::Thing::pm::TypeChecker;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item is_perl6
 
-check if this Thing is Perl6?
-
+check if this Thing is Perl6 by inspecting the #/shebang/line and whether or not
+is uses: use v6;
 
 =back
 

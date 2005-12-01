@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Thing::pm::Perl5ThereDocManager;
 
 ###############################################################################
@@ -149,7 +147,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl5ThereDocManager - Process ThereDocs embedded in Things
+Goo::Thing::pm::Perl5ThereDocManager - Process ThereDocs embedded in Perl5 programs
 
 =head1 SYNOPSIS
 
@@ -165,12 +163,11 @@ use Goo::Thing::pm::Perl5ThereDocManager;
 
 =item find_package_and_method
 
-return the method and package the there_doc is targetting
+return the method and package the ThereDoc is targetting
 
 =item process
 
-given a string, look for there_docs and then do things if you
-
+given a string, look for ThereDocs and then carry out the first ThereDoc action.
 
 =back
 

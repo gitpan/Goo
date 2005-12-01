@@ -14,7 +14,8 @@ package Goo::Template;
 #
 # Date          Change
 # -----------------------------------------------------------------------------
-# 04/03/1999    Version 1
+# 04/03/1999    Version 1 - Based on Michael Snell's brilliant replace.pm 
+#				"This is the future"
 # 10/05/2000    Version 2 - a more efficient slurping mode
 # 01/02/2002    Caching version - is memory consumption OK?
 # 24/07/2002    More OO version
@@ -84,7 +85,7 @@ sub get_token {
         # insert an object dynamically generated from code
         return eval <<CODE;
         	use lib '/home/search/shared/bin';
-        	use lib '/home/search/turbo10/bin';
+        	use lib '/home/search/trexy/bin';
         	use lib '/home/search/trexy/bin';
          	use $1; 
          	$1::$2;
@@ -136,15 +137,13 @@ __END__
 
 =head1 NAME
 
-Goo::Template - Replace tokens in a file or a string
+Goo::Template - Replace special tokens in a file or a string
 
 =head1 SYNOPSIS
 
 use Goo::Template;
 
 =head1 DESCRIPTION
-
-
 
 =head1 METHODS
 
@@ -160,14 +159,13 @@ look up the hash for the token and return the value
 
 =item replace_tokens_in_file
 
-replace tokens in a file and use a cache too
-
+replace tokens in a file
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

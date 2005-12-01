@@ -129,7 +129,8 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl5Editor - Edit a program interactively as fast as possible
+Goo::Thing::pm::Perl5Editor - Edit a Perl5 Program using your favourite editor (e.g., vi, vim, 
+nano)
 
 =head1 SYNOPSIS
 
@@ -138,15 +139,14 @@ use Goo::Thing::pm::Perl5Editor;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
 
 =item run
 
-edit a program
-
+Edit a Perl5 program by calling an external editor then process any embedded ThereDocs and 
+apply PerlTidy to format the code.
 
 =back
 

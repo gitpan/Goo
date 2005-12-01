@@ -146,8 +146,6 @@ use Goo::Action;
 
 =head1 DESCRIPTION
 
-Model the what, who, when, and why of actions performed in The Goo.
-
 =head1 METHODS
 
 =over
@@ -170,17 +168,18 @@ when did they do the action?
 
 =item get_short_thing
 
-return the short name of the Thing they did the action on?
+what thing did they do the action on?
 
 =item get_thing
 
-return the name and location of the Thing they did the action on?
+what thing did they do the action on?
+
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@trexy.com>
+Nigel Hamilton <nigel@turbo10.com>
 
 =head1 SEE ALSO
 

@@ -102,7 +102,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl6Compiler - Compile a Perl program
+Goo::Thing::pm::Perl6Compiler - Compile a Perl6 program
 
 =head1 SYNOPSIS
 
@@ -118,12 +118,11 @@ use Goo::Thing::pm::Perl6Compiler;
 
 =item run
 
-keep adding a thing to the program
+compile a Perl6 program using /usr/bin/pugs
 
 =item process_error
 
 enable the user to jump to the last error
-
 
 =back
 

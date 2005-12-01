@@ -124,7 +124,6 @@ use Goo::TextTable;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
@@ -135,14 +134,13 @@ add a row to the table
 
 =item render
 
-return a table
-
+return a text table
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

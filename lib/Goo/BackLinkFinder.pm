@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::BackLinkFinder;
 
 ###############################################################################
@@ -98,7 +96,7 @@ use Goo::BackLinkFinder;
 
 =head1 DESCRIPTION
 
-
+Use a simple grep to find backlinks.
 
 =head1 METHODS
 
@@ -106,14 +104,13 @@ use Goo::BackLinkFinder;
 
 =item get_back_links
 
-return a list of backlinks to this thing
-
+return a list of backlinks to this Thing
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

@@ -180,7 +180,7 @@ __END__
 
 =head1 NAME
 
-Goo::CareOMeter - Keep a track of what I need to care about
+Goo::CareOMeter - Show an ordered list of Things you care about
 
 =head1 SYNOPSIS
 
@@ -188,7 +188,8 @@ use Goo::CareOMeter;
 
 =head1 DESCRIPTION
 
-
+The Care[O]Meter is a top-level action handler that shows an ordered list of Things you care about.
+It helps answer the question, "what do I do next?"
 
 =head1 METHODS
 
@@ -196,22 +197,21 @@ use Goo::CareOMeter;
 
 =item get_bugs_table
 
-return a table of bugs I care about
+return a table of bugs I care about ranked by descending care_factor
 
 =item get_tasks_table
 
-return a table of tasks I care about
+return a table of tasks I care about ranked by descending care_factor
 
 =item run
 
-show the care-o-meter
-
+show the Care-O-Meter
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

@@ -70,8 +70,8 @@ use Goo::Thing::pm::Runner;
 
 =item run
 
-keep adding a thing to the program
-
+Delegate running a Perl program to either Goo::Thing::pm::Perl6Runner or 
+Goo::Thing::pm::Perl5Runner.
 
 =back
 

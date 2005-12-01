@@ -75,7 +75,6 @@ use Goo::DatabaseProfileOption;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
@@ -93,7 +92,7 @@ carry out the action!
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

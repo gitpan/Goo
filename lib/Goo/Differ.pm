@@ -96,14 +96,13 @@ use Goo::Differ;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
 
 =item diff
 
-return those lines that have changed since list1
+return those lines that have changed
 
 =item get_line_numbers
 
@@ -111,14 +110,13 @@ return the line numbers that are new or different
 
 =item get_line
 
-return the line found at
-
+return the line found at a given line number
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

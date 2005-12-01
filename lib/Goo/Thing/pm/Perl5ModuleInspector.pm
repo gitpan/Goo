@@ -88,60 +88,6 @@ sub get_uses_list {
 
 ##############################################################################
 #
-# get_method_description - return this description of a method
-#
-##############################################################################
-
-sub get_method_description {
-
-    my ($this, $method) = @_;
-
-    $this->{program} =~ m/\#\s+$method(.*?)sub/si;
-
-    my $description = $1;
-
-    return "" unless ($description);
-
-    $description =~ s/\#/ /g;
-    $description =~ s/\-/ /g;
-    $description =~ s/[\n\r]+/ /g;
-    $description =~ s/\s+/ /g;
-
-    return $description;
-
-}
-
-
-##############################################################################
-#
-# get_template_list - return a list of templates, forms, emails, pages, subforms
-#
-##############################################################################
-
-sub get_template_list {
-
-    my ($this) = @_;
-
-    my @templates = ();
-
-    my @suffixes = ('.frm', '.tpl', '.page', '.email');
-
-    foreach my $suffix (@suffixes) {
-        while ($this->{program} =~ m/['"](\w+$suffix)["']/gi) {
-
-            # print "pushing $1 onto list \n";
-            push(@templates, $1);
-        }
-    }
-
-    # print join('return ing this ----', @templates);
-    return @templates;
-
-}
-
-
-##############################################################################
-#
 # get_methods - return a list of methods in the script
 #
 ##############################################################################
@@ -239,31 +185,6 @@ sub get_filename {
 
 ##############################################################################
 #
-# get_description - get the module description
-#
-##############################################################################
-
-sub get_description {
-
-    my ($this) = @_;
-
-    $this->{program} =~ m/Description:\s+(.*?)\# (Date|Version)/s;
-
-    my $description = $1;
-
-    # strip comments
-    $description =~ s/\#/ /g;
-
-    # strip whitespace
-    $description =~ s/\s+/ /g;
-
-    return $description;
-
-}
-
-
-##############################################################################
-#
 # has_constructor - does the program have a constructor?
 #
 ##############################################################################
@@ -332,7 +253,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl5ModuleInspector - Generate documentation on a perl file based on documentation
+Goo::Thing::pm::Perl5ModuleInspector - Inspect the DOM of a Perl5 module
 
 =head1 SYNOPSIS
 
@@ -357,14 +278,6 @@ return the fully slurped file
 =item get_uses_list
 
 return a list of all the modules that this script uses
-
-=item get_method_description
-
-return this description of a method
-
-=item get_template_list
-
-return a list of templates, forms, emails, pages, subforms
 
 =item get_methods
 

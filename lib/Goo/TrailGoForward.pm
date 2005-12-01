@@ -64,7 +64,7 @@ __END__
 
 =head1 NAME
 
-Goo::TrailGoForward - Jump backwards in the Goo Trail
+Goo::TrailGoForward - Jump forwards in the Goo Trail
 
 =head1 SYNOPSIS
 
@@ -72,7 +72,7 @@ use Goo::TrailGoForward;
 
 =head1 DESCRIPTION
 
-
+Action handler for moving forward in the Trail (i.e., [F]orward)
 
 =head1 METHODS
 
@@ -80,14 +80,14 @@ use Goo::TrailGoForward;
 
 =item run
 
-go forward!!
+Go forward in the Trail.
 
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

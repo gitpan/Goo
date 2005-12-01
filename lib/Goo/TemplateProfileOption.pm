@@ -73,7 +73,6 @@ use Goo::TemplateProfileOption;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
@@ -84,14 +83,13 @@ construct a ProfileOption
 
 =item do
 
-carry out the action! - the action should be to jump to the first token
-
+the action jumps to the first token found inside the Thing
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

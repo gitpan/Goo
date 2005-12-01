@@ -114,8 +114,7 @@ return the name of the method
 
 =item to_string
 
-return a template for a method
-
+return a filled in template for a method
 
 =back
 

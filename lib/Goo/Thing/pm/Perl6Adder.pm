@@ -1,6 +1,3 @@
-#!/usr/bin/perl
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Thing::pm::Perl6Adder;
 
 ###############################################################################
@@ -56,7 +53,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl6Adder - Add stuff to a program
+Goo::Thing::pm::Perl6Adder - Add stuff to a Perl6 program
 
 =head1 SYNOPSIS
 
@@ -72,8 +69,7 @@ use Goo::Thing::pm::Perl6Adder;
 
 =item run
 
-keep adding a thing to the program
-
+Stub method. Implement later.
 
 =back
 

@@ -81,7 +81,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl5 - Model Perl5 things
+Goo::Thing::pm::Perl5 - Model Perl5 reserved words
 
 =head1 SYNOPSIS
 
@@ -89,15 +89,13 @@ use Goo::Thing::pm::Perl5;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item is_built_in_function
 
-is the function a core perl5?
+is the function a core perl5 function?
 
 =item is_reserved_word
 
@@ -107,7 +105,6 @@ is this a reserved word?
 
 return a list of reserved words
 
-
 =back
 
 =head1 AUTHOR
@@ -115,4 +112,3 @@ return a list of reserved words
 Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
-

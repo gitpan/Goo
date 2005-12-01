@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Prompter;
 
 ###############################################################################
@@ -527,8 +525,6 @@ use Goo::Prompter;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
@@ -563,15 +559,15 @@ keep asking the same question
 
 =item say
 
-say something
+say something like in Perl6
 
 =item show_title
 
-say something on a green background! - this is the goo!
+say something on a green background! - this is The Goo!
 
 =item stop
 
-do a die
+say something and then stop
 
 =item clear
 
@@ -587,11 +583,11 @@ take a string and highlight any options you find
 
 =item trace
 
-debugging aid
+print a trace message as a debugging aid
 
 =item dump
 
-debugging aid
+use Data::Dumper to show the contents of a variable
 
 =item prompt
 
@@ -607,7 +603,7 @@ return a single keystroke
 
 =item ask_with_completion
 
-ask with tab completion - <cntrl d> for a list of possibles
+ask with tab completion - <cntrl d> shows a list of possible alternatives
 
 =item get_response
 
@@ -617,12 +613,11 @@ return a response
 
 prompt for a single key
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

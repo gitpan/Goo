@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Zone;
 
 ###############################################################################
@@ -62,7 +60,8 @@ use Goo::Zone;
 
 =head1 DESCRIPTION
 
-
+Action handler for viewing the trail of the Goo Trail (i.e., [Z]one).
+It tries to answer the question, "what am I currently juggling?"
 
 =head1 METHODS
 
@@ -70,14 +69,13 @@ use Goo::Zone;
 
 =item run
 
-go back!!
-
+Show the tail of the Goo Trail
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

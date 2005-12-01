@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::DatabaseInfo;
 
 ###############################################################################
@@ -28,11 +26,11 @@ our $tables;
 
 ###############################################################################
 #
-# begin - look up all the tables
+# BEGIN - look up all the tables
 #
 ###############################################################################
 
-sub begin {
+sub BEGIN {
 
     # could use Database::getTables for the full DB -- but took a few
     # seconds to populate in the interests of speed and RAM consumption
@@ -79,25 +77,24 @@ use Goo::DatabaseInfo;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
 
-=item begin
+=item BEGIN
 
-look up all the tables
+look up all the tables in the database
 
 =item get_table_info
 
-return a table info object
+return a table info object for a given table
 
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

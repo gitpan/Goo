@@ -10,11 +10,11 @@ package Goo::Thing::pm::PerlTidyManager;
 # Filename:     Goo::Thing::pm::PerlTidyManager
 # Description:  Tidy up a Perl program - make sure the indentation is correct
 #               The tidy parameters are set on a per directory basis in the
-#                  perltidyrc file - if there is not one in the current directory
+#              	perltidyrc file - if there is not one in the current directory
 #               it looks in the home directory of the current user.
 #               Update the perltidyrc file to change the main parts of perltidy.
 #               The format is based on the Best Practices written by Damian
-#                conway - "perl best practices"..
+#               Conway - "Perl Best Practices"..
 #
 # Date          Change
 # -----------------------------------------------------------------------------
@@ -87,7 +87,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::PerlTidyManager - Tidy up a Perl program - make sure the indentation is correct
+Goo::Thing::pm::PerlTidyManager - Tidy up a Perl program using PerlTidy
 
 =head1 SYNOPSIS
 
@@ -96,14 +96,13 @@ use Goo::Thing::pm::PerlTidyManager;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
 
 =item process
 
-tidy a file
+tidy up a file after we've finished editing it
 
 
 =back
@@ -114,3 +113,4 @@ Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 
+Perl::Tidy

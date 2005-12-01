@@ -449,7 +449,7 @@ __END__
 
 =head1 NAME
 
-Goo::PerlCoder - Manipulate perl programs like a real coder. Pretend to be
+Goo::PerlCoder - Manipulate Perl programs just like a real programmer.
 
 =head1 SYNOPSIS
 
@@ -457,15 +457,13 @@ use Goo::PerlCoder;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item new
 
-construct a perl_coder object
+constructor
 
 =item save
 
@@ -473,27 +471,27 @@ save the updates to disk
 
 =item rename_method
 
-change the name of the method
+change the name of a method
 
 =item get_code
 
-return a string value
+return the code as a string
 
 =item sort_package
 
-sort the package to the program - this needs to be fixed
+sort the use list at the start of the program
 
 =item add_package
 
-add a package to the program
+add a package to the use list as the start of the program
 
 =item delete_package
 
-delete a package from the program
+delete a package from the use list
 
 =item delete_method
 
-remove a method from a program
+remove a method from the program
 
 =item clone_method
 
@@ -505,7 +503,7 @@ add a change log entry
 
 =item delete_change_log
 
-delete a changelog entry
+delete a change log entry
 
 =item add_module_name
 
@@ -513,7 +511,7 @@ add this at the top of the module
 
 =item add_returns_true
 
-all modules need to return true - so lets do it.
+all modules need to return true add a 1; at the bottom of the module
 
 =item add_header
 
@@ -533,8 +531,7 @@ add a list of packages
 
 =item add_isa
 
-add isa to this module
-
+add an isa to this module
 
 =back
 

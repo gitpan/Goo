@@ -84,8 +84,7 @@ use Goo::Thing::pm::Editor;
 
 =item run
 
-edit a program
-
+Delegate editing a Perl program to either a Goo::Editor or a Goo::Thing::pm::Perl5Editor.
 
 =back
 

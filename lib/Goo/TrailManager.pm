@@ -373,7 +373,7 @@ __END__
 
 =head1 NAME
 
-Goo::TrailManager - Manage a Trail of Goo Actions - memex style.
+Goo::TrailManager - Manage a Trail of Goo Actions - Memex style.
 
 =head1 SYNOPSIS
 
@@ -389,7 +389,7 @@ use Goo::TrailManager;
 
 =item 7
 
-keep the buffer small (thanks to miller's rule - 7 plus or minus 2)
+keep the buffer small (thanks to Miller's rule - 7 plus or minus 2)
 
 =item get_max_actionid
 
@@ -425,7 +425,7 @@ save the commands for creating the database
 
 =item get_previous_thing
 
-return the previous action from the gootrail
+return the previous action from the goo_trail
 
 =item get_latest_actions
 
@@ -440,7 +440,7 @@ save a step in the goo_trail
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

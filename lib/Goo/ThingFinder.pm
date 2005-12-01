@@ -136,30 +136,27 @@ use Goo::ThingFinder;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item get_things
 
-return a unique list of things found
+return a unique list of Things found
 
 =item get_table
 
-show a text based table of things
+show a text based table of Things
 
 =item run_driver
 
 drive the module
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

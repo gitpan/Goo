@@ -3,7 +3,7 @@
 package Goo::TextUtilities;
 
 ###############################################################################
-# turbo10.com - miscellaneous utilities for handling text
+# trexy.com - miscellaneous utilities for handling text
 #
 # Copyright Nigel Hamilton 2002
 # All Rights Reserved
@@ -369,7 +369,7 @@ return a hostname from the url
 
 =item strip_hreftags
 
-strip all href tags
+strip all href tags in a string
 
 =item uppercase_first_letters
 
@@ -381,11 +381,11 @@ escape a url string
 
 =item strip_funky_html
 
-strip any html that is too funky for a normal tag strip
+strip any HTML that is too funky for a normal tag strip
 
 =item strip_html
 
-strip the html from a string
+strip the HTML from a string
 
 =item trim_whitespace
 
@@ -393,11 +393,11 @@ strip whitespace from the front and back of a string
 
 =item compress_whitespace
 
-compress excess whitespace from many to 1 space
+compress excess whitespace from many spaces to one space
 
 =item right_pad
 
-pad a string on the righthand side up to a maximum
+pad a string on the righthand side up to a maximum number of characters
 
 =item strip_last_word
 
@@ -419,12 +419,11 @@ escape double quotes etc.
 
 return the linenumber that matches the regex
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

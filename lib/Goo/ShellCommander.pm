@@ -57,22 +57,18 @@ use Goo::ShellCommander;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item run
 
-keep adding a thing to the program
-
+keep adding a Thing to the program
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
-

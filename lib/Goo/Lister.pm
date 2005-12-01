@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Lister;
 
 ###############################################################################
@@ -9,7 +7,7 @@ package Goo::Lister;
 # All Rights Reserved
 #
 # Author:       Nigel Hamilton
-# Filename:     GooLister.pm
+# Filename:     Goo::Lister.pm
 # Description:  Load a whole list of Things at once - is this wise?
 #
 # Date          Change
@@ -41,14 +39,10 @@ sub get {
     my @list;
 
     foreach my $location ($config_file->get_locations()) {
-
         foreach my $file (FileUtilities::get_file_list($location)) {
-
             # print caller()." goo lister loading $file from $directory \n";
             push(@list, Goo::Loader::load($file));
-
         }
-
     }
 
     # return a list of Things
@@ -63,7 +57,7 @@ __END__
 
 =head1 NAME
 
-Goo::Lister - Load a whole list of Things at once - is this wise?
+Goo::Lister - Load a whole list of Things in one go
 
 =head1 SYNOPSIS
 
@@ -71,22 +65,19 @@ use Goo::Lister;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item get
 
-return a list of things
-
+return a list of Things
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

@@ -135,25 +135,25 @@ use Goo::TypeManager;
 
 =item get_all_types
 
-return the types of all thangs
+return the types of all Things
 
 =item get_type_locations
 
-return a list of directories where this thing is located
+return a list of directories where this Thing is located
 
 =item is_valid_thing
 
-is this a thing?
+is this a Thing?
 
 =item BEGIN
 
-load the configuration for the goo
+load the configuration for The Goo
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

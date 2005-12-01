@@ -524,7 +524,7 @@ use Goo::Database;
 
 =head1 DESCRIPTION
 
-
+Simple interface to DBI.
 
 =head1 METHODS
 
@@ -560,7 +560,7 @@ alias for get_result_hash
 
 =item get_result_hash
 
-return a hash for this result
+return a hash for this query handle
 
 =item bind_param
 
@@ -572,11 +572,11 @@ take a string and prepare the SQL
 
 =item show_sql
 
-display sql statement useful for debugging
+display the SQL statement useful for debugging
 
 =item execute_sql
 
-take a string and execute the sql return a hash of column headings and values
+take a string, execute the SQL return a hash of column headings and values
 
 =item execute
 
@@ -616,7 +616,7 @@ quote a value for insertion into the database
 
 =item handle_error
 
-handle any error thrown by the dbi subsystem
+handle any error thrown by the DBI subsystem
 
 =item get_primary_key
 
@@ -635,7 +635,7 @@ return the date and time according to the database
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

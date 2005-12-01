@@ -69,8 +69,8 @@ use Goo::Thing::pm::Maker;
 
 =item run
 
-interface method
-
+Delegating making Perl modules to either Goo::Thing::pm::Perl6ModuleMaker or 
+Goo::Thing::pm::Perl5ModuleMaker.
 
 =back
 

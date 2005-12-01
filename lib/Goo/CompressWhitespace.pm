@@ -6,16 +6,16 @@ package Goo::CompressWhitespace;
 # Copyright Nigel Hamilton 2005
 # All Rights Reserved
 #
-# Author: 	Nigel Hamilton
+# Author: 		Nigel Hamilton
 # Filename: 	Goo::CompressWhitespace.pm
-# Description: 	Remove whitespace
+# Description: 	Remove whitespace for web transmission
 #
-# Date 		Change
+# Date 			Change
 # -----------------------------------------------------------------------------
 # 02/02/2005 	Auto generated file
 # 02/02/2005 	Needed to reduce filesizes for more speed!
-#		Ideally all pages should be less than 1300 MTU (allowing for 
-#		HTTP headers).
+#				Ideally all pages should be less than 1300 MTU (allowing for 
+#				HTTP headers).
 #
 ###############################################################################
 
@@ -69,14 +69,14 @@ use Goo::CompressWhitespace;
 
 =item compress_html
 
-remove excess white space in html
+remove excess white space in html and javascript to reduce byte size.
 
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

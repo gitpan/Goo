@@ -1,7 +1,7 @@
 package Goo::FileUtilities;
 
 ###############################################################################
-# turbo10.com - handle files
+# trexy.com - handle files
 #
 # Copyright Nigel Hamilton 2002
 # All Rights Reserved
@@ -293,7 +293,7 @@ use Goo::FileUtilities;
 
 =head1 DESCRIPTION
 
-
+File utility functions.
 
 =head1 METHODS
 
@@ -309,7 +309,7 @@ return a hash of files and their contents
 
 =item get_short_file_list
 
-filenames list only
+return a list of filenames in a directory
 
 =item get_file_list
 
@@ -317,11 +317,11 @@ return a list of file based on a directory glob
 
 =item get_file_as_string_ref
 
-grab a file as a string
+return a string_ref to the contents of a file
 
 =item get_file_as_string
 
-grab a file as a string
+return the file contents as a string
 
 =item write_file
 
@@ -329,7 +329,7 @@ write a file
 
 =item get_file_as_lines
 
-grab a file as an array of lines
+return the file contents as an array of lines
 
 =item write_lines_as_file
 
@@ -345,18 +345,17 @@ return the path portion of the filename
 
 =item slurp
 
-synonym for get_file_as_string
+Perl6 synonym for get_file_as_string
 
 =item get_cwd
 
 return the current working directory
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

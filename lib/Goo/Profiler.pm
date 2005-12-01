@@ -280,7 +280,7 @@ show the top header
 
 =item run
 
-goo interface method
+run this action handler
 
 =item get_option
 
@@ -306,12 +306,11 @@ start off the index
 
 this should be implemented by the subclass
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

@@ -27,21 +27,6 @@ use base qw(Goo::Object);
 
 ###############################################################################
 #
-# is_development - are we running on dev.trexy.com?
-#
-###############################################################################
-
-sub is_development {
-
-    #   return 1;
-    # try to avoid a hostname look up here
-    return $ENV{'SERVER_NAME'} =~ /localhost/ || $ENV{'DESKTOP_SESSION'} eq 'kde';
-
-}
-
-
-###############################################################################
-#
 # is_cgi - is this a cgi script?
 #
 ###############################################################################
@@ -131,14 +116,6 @@ use Goo::Environment;
 
 =over
 
-=item is_sparky
-
-are we running under sparky?
-
-=item is_development
-
-are we running on dev.trexy.com?
-
 =item is_cgi
 
 is this a cgi script?
@@ -159,12 +136,11 @@ which machine is this running on?
 
 who is using this program?
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

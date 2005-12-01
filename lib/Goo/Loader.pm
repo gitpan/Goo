@@ -27,10 +27,9 @@ use Cwd;
 use Goo::Database;
 use Goo::Prompter;
 
+use Goo::FileThing;
 use Goo::ConfigFile;
 use Goo::DatabaseThing;
-
-use Goo::FileThing;
 use Goo::FileThing::Finder;
 
 
@@ -214,7 +213,7 @@ use Goo::Loader;
 
 =head1 DESCRIPTION
 
-
+Look for a Thing, load it and return it.
 
 =head1 METHODS
 
@@ -222,11 +221,11 @@ use Goo::Loader;
 
 =item load
 
-return a thang
+return a Thing
 
 =item get_maker
 
-things must be made first!
+Some Things must be made first! Return a maker for a Thing.
 
 =item get_prefix
 
@@ -238,14 +237,13 @@ return the goo prefix
 
 =item run_driver
 
-drive the module from the command line
-
+drive this module from the command line
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

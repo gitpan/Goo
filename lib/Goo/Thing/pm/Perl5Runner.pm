@@ -69,8 +69,7 @@ use Goo::Thing::pm::Perl5Runner;
 
 =item run
 
-keep adding a thing to the program
-
+call /usr/bin/perl to run a Perl5 program
 
 =back
 

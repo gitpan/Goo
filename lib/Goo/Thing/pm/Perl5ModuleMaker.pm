@@ -134,7 +134,7 @@ __END__
 
 =head1 NAME
 
-Goo::Perl5ModuleMaker - Command line utility for making module skeletons faster
+Goo::Perl5ModuleMaker - Command line utility for making Perl5 module skeletons faster
 
 =head1 SYNOPSIS
 
@@ -150,8 +150,7 @@ use Goo::Perl5ModuleMaker;
 
 =item run
 
-interface method
-
+make the module skeleton
 
 =back
 

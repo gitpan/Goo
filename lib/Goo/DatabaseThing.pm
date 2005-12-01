@@ -118,7 +118,6 @@ use Goo::DatabaseThing;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
@@ -129,22 +128,21 @@ construct a DatabaseThing
 
 =item get_database_object
 
-return an object for this thing
+return an object for this Thing
 
 =item get_location
 
-all Database Things are located in the database
+return the table where this DatabaseThing is located.
 
 =item get_columns
 
 return the columns in display order
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

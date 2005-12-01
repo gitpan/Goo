@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# -*- Mode: cperl; mode: folding; -*-
 
 package Goo::Thing::pm::PackageProfileOption;
 
@@ -86,12 +85,11 @@ use Goo::Thing::pm::PackageProfileOption;
 
 =item new
 
-construct a package_profile_option
+constructor
 
 =item do
 
-carry out the action!
-
+Jump to another package.
 
 =back
 

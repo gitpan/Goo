@@ -68,15 +68,13 @@ __END__
 
 =head1 NAME
 
-Goo::Logger - Keep a simple text-based logger for the Trawler
+Goo::Logger - Write a message to the log
 
 =head1 SYNOPSIS
 
 use Goo::Logger;
 
 =head1 DESCRIPTION
-
-
 
 =head1 METHODS
 
@@ -86,12 +84,11 @@ use Goo::Logger;
 
 write a timestamped entry to the log
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

@@ -183,7 +183,7 @@ use Goo::CommandLineManager;
 
 =head1 DESCRIPTION
 
-
+Manage command line arguments.
 
 =head1 METHODS
 
@@ -195,19 +195,19 @@ constructor
 
 =item get_last_parameter
 
-pop off the last parameter
+pop off the last parameter on the command line
 
 =item get_parameters
 
-return all the parameters
+return all the parameters on the command line
 
 =item get_parameter
 
-return an option that corresponds to the right switch
+return the parameter at a given position
 
 =item get_selected_option
 
-return an option that corresponds to the right switch
+return the switch that is specified
 
 =item add_option
 
@@ -221,12 +221,11 @@ return the value of the switch
 
 display the help for all the command options
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

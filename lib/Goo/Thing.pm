@@ -224,8 +224,6 @@ use Goo::Thing;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
@@ -248,7 +246,7 @@ get the full contents of the file
 
 =item can_do_action
 
-can this thing do the action?
+can this Thing do the action?
 
 =item get_commands
 
@@ -256,14 +254,13 @@ return a list of commands
 
 =item do_action
 
-execute action
-
+execute the action
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

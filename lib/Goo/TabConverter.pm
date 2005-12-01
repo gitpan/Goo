@@ -84,22 +84,19 @@ use Goo::TabConverter;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item tabs_to_spaces
 
-turn any tabs into the right number of characters
-
+turn any tabs into n characters
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

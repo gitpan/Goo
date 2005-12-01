@@ -131,7 +131,7 @@ use Goo::JumpManager;
 
 =head1 DESCRIPTION
 
-
+Top level action handler for jumping to a line number, string or another Thing (i.e., [J]ump).
 
 =head1 METHODS
 
@@ -143,14 +143,13 @@ do the jump to another thing
 
 =item run
 
-do the jump!
-
+handle the jump action
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

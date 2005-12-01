@@ -29,7 +29,7 @@ package Goo::WebDBLite;
 #				Don't compress the files on disk for readability but *do*
 # 05/02/2005	Added getTemplate for simpler access to "bodytext" templates
 # 22/06/2005	Moving to Goo2! Added type_locations as a bridge before the
-#				full goo changes kick in!
+#				full Goo changes kick in!
 #								    
 ##############################################################################
 
@@ -49,11 +49,11 @@ our $db		  = {};
 
 my $goobase = "$ENV{HOME}/.goo";
 my $type_locations = { formtemplate  => "$goobase/things/frm",
-		       page	     => "$goobase/things/page",
-		       email	     => "$goobase/things/email",
-		       emailtemplate => "$goobase/things/email",
-		       settings	     => "$goobase/things/settings",
-		       template	     => "$goobase/things/tpl" };
+				       page	     	 => "$goobase/things/page",
+				       email	     => "$goobase/things/email",
+				       emailtemplate => "$goobase/things/email",
+				       settings	     => "$goobase/things/settings",
+				       template	     => "$goobase/things/tpl" };
 
 
 ##############################################################################
@@ -172,7 +172,7 @@ __END__
 
 =head1 NAME
 
-Goo::WebDBLite - This provides a Lite interface to the Data to reduce RAM
+Goo::WebDBLite - This provides a Lite interface to XMLish Things
 
 =head1 SYNOPSIS
 
@@ -192,18 +192,17 @@ return a value - polymorphically
 
 =item get_template
 
-simpler access
+return a text template
 
 =item load_object
 
 load the data file from disk - this will take some memory
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

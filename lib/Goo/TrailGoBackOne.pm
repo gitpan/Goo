@@ -49,7 +49,7 @@ __END__
 
 =head1 NAME
 
-Goo::TrailGoBackOne - Jump backwards in the Goo Trail
+Goo::TrailGoBackOne - Jump backwards one step in the Goo Trail
 
 =head1 SYNOPSIS
 
@@ -57,22 +57,19 @@ use Goo::TrailGoBackOne;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item run
 
-go back!!
-
+perform the action of jumping back one step in the Goo Trail
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

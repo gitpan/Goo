@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# -*- Mode: cperl; mode: folding; -*-
 
 package Goo::ThingProfileOption;
 
@@ -94,12 +93,11 @@ construct a profile_option
 
 carry out the action!
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

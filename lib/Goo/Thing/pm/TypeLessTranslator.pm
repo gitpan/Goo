@@ -209,7 +209,8 @@ __END__
 
 =head1 NAME
 
-TypeLessTranslator - Translate typeless text to full code - sms 4 codng
+TypeLessTranslator - Experimental module. It translates "typeless" text to full code. It's like 
+writing abbreviate sms txt for Perl code.
 
 =head1 SYNOPSIS
 
@@ -225,7 +226,7 @@ use TypeLessTranslator;
 
 =item translate_file
 
-translate a file
+translate a file by expanding typeless code to full code
 
 =item translate_line
 
@@ -233,12 +234,11 @@ translate a line
 
 =item expand_reserved_words
 
-turn any abbreviated reserved words into full words
+turn any abbreviated reserved words into full reserved words
 
 =item match_reserved_word
 
 match abbreviated letters to full reserved words
-
 
 =back
 

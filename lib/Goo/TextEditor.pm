@@ -127,7 +127,7 @@ use Goo::TextEditor;
 
 =head1 DESCRIPTION
 
-
+Edit a file with your favourite external text editor (e.g., vi, vim, nano etc.).
 
 =head1 METHODS
 
@@ -143,14 +143,13 @@ just view a file
 
 =item edit_string
 
-edit a string in a text_editor
-
+edit a string inside a text_editor
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

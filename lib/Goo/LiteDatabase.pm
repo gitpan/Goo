@@ -485,7 +485,7 @@ use Goo::LiteDatabase;
 
 =head1 DESCRIPTION
 
-
+Interface to an SQLite database.
 
 =head1 METHODS
 
@@ -497,19 +497,19 @@ open a connection to the default database
 
 =item do_sql
 
-execute some sql
+execute some SQL
 
 =item do_query
 
-execute sql and return the result all in one
+execute SQL and return the result all in one
 
 =item generate_numeric_sqlin_clause
 
-return an sql 'in' clause with numeric values
+return an SQL 'in' clause with numeric values
 
 =item generate_string_sqlin_clause
 
-return an sql 'in' clause with string values
+return an SQL 'in' clause with string values
 
 =item get_number_of_rows
 
@@ -529,7 +529,7 @@ bind a parameter to a value
 
 =item show_sql
 
-display sql statement useful for debugging
+display SQL statement useful for debugging
 
 =item execute_sql
 
@@ -586,7 +586,6 @@ return the primary key for a table
 =item get_table_columns
 
 return a list of column names for the table
-
 
 =back
 

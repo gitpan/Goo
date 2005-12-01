@@ -155,8 +155,6 @@ use Goo::DatabaseObject;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
@@ -171,14 +169,13 @@ delete the current object in the database
 
 =item replace
 
-replace the entire row in the database with the 'state' of the
-
+replace the entire row in the database with the current 'state' of the object
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

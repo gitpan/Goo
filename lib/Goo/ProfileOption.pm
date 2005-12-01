@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# -*- Mode: cperl; mode: folding; -*-
 
 package Goo::ProfileOption;
 
@@ -96,15 +95,13 @@ use Goo::ProfileOption;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item new
 
-instantiate an profile_option
+constructor
 
 =item get_text
 
@@ -114,12 +111,10 @@ return the text of the option
 
 carry out the action!
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
-

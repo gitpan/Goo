@@ -134,7 +134,8 @@ use Goo::ThereDocManager;
 
 =head1 DESCRIPTION
 
-
+ThereDocs enable you to jump quickly from one Thing to another Thing while editing.
+Use a ThereDoc when you want to jump to "There".
 
 =head1 METHODS
 
@@ -142,18 +143,17 @@ use Goo::ThereDocManager;
 
 =item find_there_doc
 
-find the line where the there_doc is found
+find the line where the ThereDoc is found
 
 =item process
 
-given a string, look for there_docs and then do things if you
-
+given a string, look for ThereDocs and then do the appropriate action
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

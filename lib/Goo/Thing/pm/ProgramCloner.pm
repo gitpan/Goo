@@ -193,7 +193,7 @@ use Goo::Thing::pm::ProgramCloner;
 
 =item new
 
-set all the values required
+constructor
 
 =item generate_header
 

@@ -84,7 +84,7 @@ __END__
 
 =head1 NAME
 
-Goo::BackLinkManager - Traverse the backlinks for a given "Thing"
+Goo::BackLinkManager - Display the backlinks for a given "Thing"
 
 =head1 SYNOPSIS
 
@@ -92,7 +92,10 @@ use Goo::BackLinkManager;
 
 =head1 DESCRIPTION
 
+A generic action handler for showing Back [L]inks.
 
+Uses the BackLinkFinder to extracts the backlinks for a given "Thing" 
+then displays a profile of the results.
 
 =head1 METHODS
 
@@ -100,14 +103,13 @@ use Goo::BackLinkManager;
 
 =item run
 
-do the thing
-
+Call the BackLinkFinder and display the results.
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

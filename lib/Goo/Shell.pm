@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::Shell;
 
 ###############################################################################
@@ -24,6 +22,7 @@ package Goo::Shell;
 use strict;
 
 use Goo;
+use Goo::Loader;
 use Goo::Prompter;
 use Goo::TypeManager;
 
@@ -36,6 +35,7 @@ use Goo::TypeManager;
 
 sub do {
 
+	# say hello!
     Goo::Prompter::say();
     Goo::Prompter::yell("Welcome to The Goo");
     Goo::Prompter::say();
@@ -52,12 +52,18 @@ sub do {
 
         if ($arg1 =~ /(z|zone)/i) {
 
-            # show the current working zone
-            system("perl -I$ENV{GOOBASE}/shared/bin $ENV{GOOBASE}/bin/goo.pl p tail.trail");
+			my $zone_thing = Goo::Loader::load("tail.trail");
+
+			# show a profile of the tail of the trail
+			$zone_thing->do_action("P");
 
         } elsif (Goo::TypeManager::is_valid_thing($arg2)) {
 
-            system("perl -I$ENV{GOOBASE}/bin $ENV{GOOBASE}/bin/goo.pl $arg1 $arg2");
+			my $thing = Goo::Loader::load($arg2);
+
+			if ($thing->isa("Goo::Thing")) {
+				$thing->do_action($arg1);
+			}
 
         } else {
 
@@ -101,7 +107,7 @@ run the shell in an interactive loop
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

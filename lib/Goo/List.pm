@@ -106,8 +106,6 @@ use Goo::List;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
@@ -118,18 +116,17 @@ return a sorted unique list
 
 =item halve_list
 
-split a list in two
+return a list split in two
 
 =item quarter_list
 
-split a list in four!
-
+return a list split in four
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

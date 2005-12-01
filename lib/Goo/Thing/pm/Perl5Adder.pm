@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-# -*- Mode: cperl; mode: folding; -*-
 
 package Goo::Thing::pm::Perl5Adder;
 
@@ -92,7 +91,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl5Adder - Add stuff to a program
+Goo::Thing::pm::Perl5Adder - Add stuff to a Perl5 program
 
 =head1 SYNOPSIS
 
@@ -108,8 +107,8 @@ use Goo::Thing::pm::Perl5Adder;
 
 =item run
 
-keep adding a thing to the program
-
+Action handler for adding methods, packages or change log entries to a Perl5 program (i.e., 
+[A]dd).
 
 =back
 

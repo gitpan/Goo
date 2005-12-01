@@ -184,12 +184,11 @@ return a list of all the modules that this script uses
 
 =item get_signatures
 
-return a list of all the modules that this script uses
+return a list of the method/sub/submethod signatures
 
 =item get_author
 
 return the name of the author
-
 
 =back
 
@@ -198,4 +197,3 @@ return the name of the author
 Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
-

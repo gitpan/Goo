@@ -59,14 +59,13 @@ use Goo::Header;
 
 =item show
 
-show a  the header in detail
-
+show a consistent header at the top of the screen
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

@@ -86,7 +86,7 @@ use Goo::Thing::pm::MethodProfileOption;
 
 =item new
 
-construct a profile_option
+constructor
 
 =item do
 

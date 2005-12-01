@@ -57,7 +57,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Profiler - Create a synopsis of a program / module / script
+Goo::Thing::pm::Profiler - Show a profile of a Perl program
 
 =head1 SYNOPSIS
 
@@ -73,8 +73,7 @@ use Goo::Thing::pm::Profiler;
 
 =item run
 
-generate a profile of a program
-
+Delegate to Goo::Thing::pm::Perl6Profiler or Goo::Thing::pm::Perl5Profiler.
 
 =back
 

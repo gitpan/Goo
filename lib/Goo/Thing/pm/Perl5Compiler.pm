@@ -110,19 +110,17 @@ use Goo::Thing::pm::Perl5Compiler;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
 
 =item run
 
-keep adding a thing to the program
+call /usr/bin/perl -c to compile the code.
 
 =item process_error
 
-enable the user to jump to the last error
-
+catch any error so the user can jump to the last error
 
 =back
 
@@ -131,4 +129,3 @@ enable the user to jump to the last error
 Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
-

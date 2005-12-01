@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::TableInfo;
 
 ###############################################################################
@@ -112,14 +110,13 @@ __END__
 
 =head1 NAME
 
-Goo::TableInfo - Provide meta details about SQL tables
+Goo::TableInfo - Provide meta details about MySQL tables
 
 =head1 SYNOPSIS
 
 use Goo::TableInfo;
 
 =head1 DESCRIPTION
-
 
 
 =head1 METHODS
@@ -142,12 +139,11 @@ return the primary key of a table
 
 return a type for the column
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

@@ -89,7 +89,8 @@ use TabAwareEditor;
 
 =head1 DESCRIPTION
 
-
+Wrap an external editor like vi or nano. Replace tab characters with four space characters as 
+per Damian Conway's "Perl Best Practices".
 
 =head1 METHODS
 
@@ -97,14 +98,13 @@ use TabAwareEditor;
 
 =item run
 
-edit a file
-
+call an external editor. Replace tabs with four spaces.
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

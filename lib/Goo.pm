@@ -45,7 +45,7 @@ use Goo::LiteDatabase;
 
 use base qw(Goo::Object);
 
-our $VERSION = '0.04';
+our $VERSION = '0.06';
 
 
 ###############################################################################
@@ -168,24 +168,33 @@ Goo - Stick Things together with The Goo
 
 use Goo;
 
+# for example
+goo -p Object.pm
+
 =head1 DESCRIPTION
 
+"The Goo" helps you stick "Things" together in your working environment.
 
+Things include Perl modules, Perl scripts, log files, javascripts, configuration files, database tables, templates etc.
+
+The Goo records a "Trail" as you jump quickly from Thing to Thing in a simple, text-based console. It remembers how you 
+associate Things in your environment.
+
+Accelerate your work by quickly traversing the Trail of associations between Things. 
 
 =head1 METHODS
 
 =over
 
-=item doAction
+=item do_action
 
-edit a template etc
-
+Take a command line switch (e.g., -p) and map it to an action handler (e.g., [P]rofile). 
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

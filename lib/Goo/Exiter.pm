@@ -60,7 +60,7 @@ use Goo::Exiter;
 
 =head1 DESCRIPTION
 
-
+Top level action handler (i.e., E[X]it). Called when the user wants to exit The Goo.
 
 =head1 METHODS
 
@@ -68,14 +68,13 @@ use Goo::Exiter;
 
 =item run
 
-exit from the goo
-
+exit from The Goo
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

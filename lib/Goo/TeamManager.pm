@@ -24,19 +24,6 @@ use Goo::SimpleEmailer;
 
 ###############################################################################
 #
-# get_companies - return a list of all programmers
-#
-###############################################################################
-
-sub get_companies {
-
-    return ("trexy.com", "turbo10.com");
-
-}
-
-
-###############################################################################
-#
 # get_programmer_names - return a list of all programmers
 #
 ###############################################################################
@@ -108,15 +95,11 @@ use Goo::TeamManager;
 
 =head1 DESCRIPTION
 
-
+Model all the members of a team.
 
 =head1 METHODS
 
 =over
-
-=item get_companies
-
-return a list of all programmers
 
 =item get_programmer_names
 
@@ -128,18 +111,17 @@ return a list of all programmer emails
 
 =item get_all_nick_names
 
-return a list of all staff members
+return a list of nick names for all staff members
 
 =item send_email
 
 send an email to all staff
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

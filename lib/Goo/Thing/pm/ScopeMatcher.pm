@@ -111,15 +111,13 @@ use Goo::Thing::pm::ScopeMatcher;
 
 =head1 DESCRIPTION
 
-
-
 =head1 METHODS
 
 =over
 
 =item get_scope_of_string
 
-return the scope of the string
+return the scope of the current string
 
 =item get_scope_of_line
 

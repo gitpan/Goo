@@ -67,7 +67,7 @@ use Goo::Grepper;
 
 =head1 DESCRIPTION
 
-
+Grep through files trying to find a string.
 
 =head1 METHODS
 
@@ -75,14 +75,13 @@ use Goo::Grepper;
 
 =item find_files
 
-find all the files that match a pattern in a directory
-
+find all the files in a directory that match a pattern
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

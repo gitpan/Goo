@@ -76,8 +76,7 @@ use Goo::Thing::pm::Adder;
 
 =item run
 
-keep adding a thing to the program
-
+Delegate adding a stuff to either Goo::Thing:pm::Perl5Adder or Goo::Thing::pm::Perl6Adder.
 
 =back
 

@@ -134,7 +134,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::Perl6Editor - Edit a program interactively as fast as possible
+Goo::Thing::pm::Perl6Editor - Not implemented yet.
 
 =head1 SYNOPSIS
 
@@ -150,7 +150,7 @@ use Goo::Thing::pm::Perl6Editor;
 
 =item run
 
-edit a program
+edit a Perl6 program
 
 
 =back
