@@ -43,7 +43,7 @@ __END__
 
 =head1 NAME
 
-Goo::Header - Show a consistent style of text header for the GOO
+Goo::Header - Show a consistent style of text header for The Goo
 
 =head1 SYNOPSIS
 

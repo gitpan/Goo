@@ -91,7 +91,7 @@ __END__
 
 =head1 NAME
 
-Goo::OptionIndexTable - Take a hash of of options and turn into a table of text
+Goo::OptionIndexTable - Take a hash of options and turn into a table of text
 
 =head1 SYNOPSIS
 

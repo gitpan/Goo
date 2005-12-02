@@ -73,7 +73,7 @@ __END__
 
 =head1 NAME
 
-Goo::DatabaseThing::Maker - Make a new row in a Table
+Goo::DatabaseThing::Maker - Make a new row in a database table
 
 =head1 SYNOPSIS
 
@@ -82,21 +82,19 @@ use Goo::DatabaseThing::Maker;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
 
 =item run
 
-edit a task
-
+make a new row
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

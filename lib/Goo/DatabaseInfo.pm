@@ -68,7 +68,7 @@ __END__
 
 =head1 NAME
 
-Goo::DatabaseInfo - Find out all the database info at once!
+Goo::DatabaseInfo - Simple access to the database schema
 
 =head1 SYNOPSIS
 
@@ -88,7 +88,6 @@ look up all the tables in the database
 =item get_table_info
 
 return a table info object for a given table
-
 
 =back
 

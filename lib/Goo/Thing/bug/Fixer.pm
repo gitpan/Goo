@@ -71,7 +71,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::bug::Fixer - Make a task module
+Goo::Thing::bug::Fixer - Fix a bug
 
 =head1 SYNOPSIS
 
@@ -94,7 +94,7 @@ make a bug_fixer
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

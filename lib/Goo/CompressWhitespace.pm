@@ -53,7 +53,7 @@ __END__
 
 =head1 NAME
 
-Goo::CompressWhitespace - Remove whitespace
+Goo::CompressWhitespace - Remove excess whitespace
 
 =head1 SYNOPSIS
 
@@ -62,14 +62,13 @@ use Goo::CompressWhitespace;
 =head1 DESCRIPTION
 
 
-
 =head1 METHODS
 
 =over
 
 =item compress_html
 
-remove excess white space in html and javascript to reduce byte size.
+remove excess whitespace in HTML and Javascript to reduce overall byte size
 
 
 =back

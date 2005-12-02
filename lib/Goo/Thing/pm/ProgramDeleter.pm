@@ -117,7 +117,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::pm::ProgramDeleter - Add stuff to a program
+Goo::Thing::pm::ProgramDeleter - Delete stuff from a program
 
 =head1 SYNOPSIS
 
@@ -125,7 +125,7 @@ use Goo::Thing::pm::ProgramDeleter;
 
 =head1 DESCRIPTION
 
-
+WARNING: Use with care. This needs to delegate correctly to either a Perl6Deleter or a Perl5Deleter.
 
 =head1 METHODS
 

@@ -11,6 +11,7 @@ package Goo;
 # Description:  Stick Things together with The Goo
 #
 #               See: http://thegoo.org
+#                    http://blog.thegoo.org
 #
 # Date          Change
 # -----------------------------------------------------------------------------
@@ -45,7 +46,7 @@ use Goo::LiteDatabase;
 
 use base qw(Goo::Object);
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 
 ###############################################################################
@@ -69,14 +70,15 @@ sub check_environment {
         return;
     }
 
-    # no database yet - let's make one
+    # no database yet - let's make one?
     # check if the ~/.goo directory is present?
     if (!-d $database_directory) {    		# if there is no directory
         if (-e $database_directory) {   	# but a file with the name .goo
             rename $database_directory, "$database_directory.wtf";    # move it
         }
 
-        mkdir $database_directory;      # make the directory
+		# make the directory
+        mkdir $database_directory;      
 
         # so this is our 1st time invocation: copy files from skeletton
         copy(\1, '/usr/lib/Goo/*', $database_directory);
@@ -166,10 +168,21 @@ Goo - Stick Things together with The Goo
 
 =head1 SYNOPSIS
 
-use Goo;
+shell> goo -p Object.pm		# show a [P]rofile of Object.pm
 
-# for example
-goo -p Object.pm
+shell> goo -l Object.pm		# show Back [L]inks to Object.pm
+
+shell> goo -r Object.pm		# [R]un Object.pm
+
+shell> goo -i Object.pm		# comp[I]le Object.pm
+
+shell> goo -p access.log		# show a [P]rofile of access.log
+
+shell> goo -c Object.pm		# [C]lone Object.pm into another Thing
+
+shell> goo -o				# the Care[O]Meter shows Things you care about while coding (e.g., tasks, bugs)
+
+shell> goo -z				# show Things in your working [Z]one or mental buffer
 
 =head1 DESCRIPTION
 
@@ -188,11 +201,12 @@ Accelerate your work by quickly traversing the Trail of associations between Thi
 
 =item check_environment
 
-check and set up the environment
+Check and set up the environment.
 
 =item do_action
 
-Take a command line switch (e.g., -p) and map it to an action handler (e.g., [P]rofile). 
+Take a command line switch (e.g., -p) and map it to an action handler (e.g., [P]rofile) and perform the action on the 
+Thing.
 
 =back
 
@@ -202,3 +216,8 @@ Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 
+Tour	http://thegoo.org/goo-tour.pdf (big)
+
+Web 	http://thegoo.org
+
+Blog	http://blog.thegoo.org

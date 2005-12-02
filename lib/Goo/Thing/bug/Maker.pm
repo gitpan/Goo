@@ -114,7 +114,7 @@ make a bug_maker
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

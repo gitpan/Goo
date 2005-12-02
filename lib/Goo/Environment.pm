@@ -102,7 +102,7 @@ __END__
 
 =head1 NAME
 
-Goo::Environment - provide info about the environment the program is running in
+Goo::Environment - Provide details about the environment The Goo is running in
 
 =head1 SYNOPSIS
 

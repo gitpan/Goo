@@ -66,7 +66,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::gml::Profiler - Create a synopsis of a gml Thing
+Goo::Thing::gml::Profiler - Create a synopsis of a Goo Markup Language (GML) Thing
 
 =head1 SYNOPSIS
 
@@ -84,12 +84,11 @@ use Goo::Thing::gml::Profiler;
 
 return a table of tokens that this template uses
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

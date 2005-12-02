@@ -126,7 +126,7 @@ __END__
 
 =head1 NAME
 
-Goo::FileThing - A new generic type of "Thing" in The Goo based on global config
+Goo::FileThing - A "Thing" that is found in the filesystem and has a location
 
 =head1 SYNOPSIS
 
@@ -158,7 +158,7 @@ return the filename
 
 =item get_location
 
-return the directory this thing is located in
+return the directory this Thing is located in
 
 =back
 

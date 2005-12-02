@@ -109,7 +109,7 @@ __END__
 
 =head1 NAME
 
-Goo::DatabaseThing - Like a "Thing" but it's found in the database.
+Goo::DatabaseThing - A "Thing" that is found in the database.
 
 =head1 SYNOPSIS
 
@@ -124,7 +124,7 @@ use Goo::DatabaseThing;
 
 =item new
 
-construct a DatabaseThing
+constructor
 
 =item get_database_object
 

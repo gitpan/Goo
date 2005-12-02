@@ -65,7 +65,7 @@ __END__
 
 =head1 NAME
 
-Goo::FileThing::Deleter - Very simple program for deleting files from TheGoo
+Goo::FileThing::Deleter - Delete a file
 
 =head1 SYNOPSIS
 
@@ -88,7 +88,7 @@ create the output file
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

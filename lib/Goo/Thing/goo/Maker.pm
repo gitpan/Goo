@@ -406,15 +406,18 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::goo::Maker - Make .goo configuration file
+Goo::Thing::goo::Maker - Make a new Thing by creating a .goo configuration file
 
 =head1 SYNOPSIS
 
-use Goo::Thing::goo::Maker;
+# make a new Python Thing
+shell> goo -m py.goo
+
+# make a new Thing for handling text files
+shell> goo -m txt.goo
+
 
 =head1 DESCRIPTION
-
-
 
 =head1 METHODS
 
@@ -422,15 +425,15 @@ use Goo::Thing::goo::Maker;
 
 =item run
 
-generate a goo file
+generate a Goo file
 
 =item get_file_locations
 
-find all the locations for this thing?
+find all the locations for this Thing?
 
 =item get_commands
 
-get a list of commands and action handlers for this thing
+get a list of commands and action handlers for this Thing
 
 =item get_prefix
 
@@ -444,12 +447,11 @@ write the file to disk
 
 make a table
 
-
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

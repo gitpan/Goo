@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::DatabaseObject;
 
 ###############################################################################
@@ -147,7 +145,7 @@ __END__
 
 =head1 NAME
 
-Goo::DatabaseObject - Bridge the relational and OO world!
+Goo::DatabaseObject - Bridge between relational and OO model
 
 =head1 SYNOPSIS
 
@@ -161,7 +159,7 @@ use Goo::DatabaseObject;
 
 =item new
 
-construct a goo_database_object object
+constructor
 
 =item delete
 

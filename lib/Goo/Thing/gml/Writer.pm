@@ -84,7 +84,7 @@ __END__
 
 =head1 NAME
 
-Goo::Thing::gml::Writer - Goo Markup Language
+Goo::Thing::gml::Writer - Write a Goo Markup Language (GML) Thing
 
 =head1 SYNOPSIS
 
@@ -111,7 +111,7 @@ turn a hash into a string
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

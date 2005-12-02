@@ -1,5 +1,3 @@
-# -*- Mode: cperl; mode: folding; -*-
-
 package Goo::DatabaseThing::Profiler;
 
 ###############################################################################
@@ -116,7 +114,7 @@ __END__
 
 =head1 NAME
 
-Goo::DatabaseThing::Profiler - Provide a profile of a database Thing
+Goo::DatabaseThing::Profiler - Show a profile of a database Thing
 
 =head1 SYNOPSIS
 
@@ -143,7 +141,7 @@ return a table of methods
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

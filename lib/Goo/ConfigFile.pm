@@ -269,7 +269,7 @@ __END__
 
 =head1 NAME
 
-Goo::ConfigFile - Goo Config - parse .goo files. Based loosely on .ini files.
+Goo::ConfigFile - Parse and load .goo files. Based loosely on .ini files.
 
 =head1 SYNOPSIS
 
@@ -277,14 +277,21 @@ use Goo::ConfigFile;
 
 =head1 DESCRIPTION
 
-All Things have a corresponding ".goo" file. Perl modules for example have the configuration file "pm.goo". 
+All Things have a corresponding ".goo" file based on their file suffix. Perl modules, for example, have the configuration
+file "pm.goo", scripts "pl.goo", Javascript files "js.goo", log files "log.goo" and Goo configuration files "goo.goo". 
 
-All .goo files are stored in the user's home directory: ~/.goo/things/.
+All .goo files are stored in the user's home directory: ~/.goo/things/goo/.
 
-A .goo configuration file includes a list of actions (e.g., E[X]it) and an action handler (e.g., Exiter.pm).
-For file-based Things the configuration file includes a "location" field(s) where Things of this type can be found.
+A .goo configuration file includes a list of actions (e.g., E[X]it) and an action handler (e.g., Exiter.pm). For
+file-based Things (see Goo::FileThing) the configuration file includes a "location" field(s) where Things of this type can
+be found.
 
-For database Things the configuration file includes a "table" field where Things of this type can be found.
+For database Things (see Goo::DatabaseThing) the configuration file includes a "table" field where Things of this type can
+be found.
+
+Each action specified in .goo file contain an action letter in square brackets (e.g., [E]dit). This letter can be used 
+directly on the command line to invoke the action handler on the Thing (e.g., goo -e Object.pm). 
+
 
 =head1 METHODS
 
@@ -292,7 +299,7 @@ For database Things the configuration file includes a "table" field where Things
 
 =item new
 
-return a goo_config_file
+constructor
 
 =item get_action_handler
 

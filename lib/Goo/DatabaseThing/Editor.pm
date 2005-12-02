@@ -71,7 +71,7 @@ __END__
 
 =head1 NAME
 
-Goo::DatabaseThing::Editor - Edit a Table
+Goo::DatabaseThing::Editor - Edit a row in a database table
 
 =head1 SYNOPSIS
 
@@ -87,14 +87,13 @@ use Goo::DatabaseThing::Editor;
 
 =item run
 
-edit a task
-
+edit a row in a database table
 
 =back
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

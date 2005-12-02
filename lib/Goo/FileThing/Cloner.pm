@@ -96,7 +96,7 @@ __END__
 
 =head1 NAME
 
-Goo::FileThing::Cloner - Really simple Cloner
+Goo::FileThing::Cloner - Simply clone one file to another
 
 =head1 SYNOPSIS
 
@@ -119,7 +119,7 @@ create the output file
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

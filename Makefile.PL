@@ -9,9 +9,7 @@ WriteMakefile(
     AUTHOR              => 'Nigel Hamilton <nigel@trexy.com>',
     VERSION_FROM        => 'lib/Goo.pm',
     PL_FILES            => {},
-    EXE_FILES           => [ 'bin/goo.pl' ],
-    INST_LIB            => './skel',
-    INSTALLSITELIB      => '/usr/lib/Goo',
+    EXE_FILES           => [ 'bin/goo.pl', 'bin/goo' ],
     PREREQ_PM => {
         'CGI'               => 0,
         'Config::Auto'      => 0,

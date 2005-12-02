@@ -55,15 +55,13 @@ __END__
 
 =head1 NAME
 
-Goo::DatabaseThing::Deleter - Delete a row from a table
+Goo::DatabaseThing::Deleter - Delete a row from a database table
 
 =head1 SYNOPSIS
 
 use Goo::DatabaseThing::Deleter;
 
 =head1 DESCRIPTION
-
-
 
 =head1 METHODS
 
@@ -78,7 +76,7 @@ edit a task
 
 =head1 AUTHOR
 
-Nigel Hamilton <nigel@turbo10.com>
+Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
 

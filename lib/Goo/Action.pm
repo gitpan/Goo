@@ -138,7 +138,7 @@ __END__
 
 =head1 NAME
 
-Goo::Action - Remember an action in The Goo
+Goo::Action - A Goo action
 
 =head1 SYNOPSIS
 
@@ -146,7 +146,7 @@ use Goo::Action;
 
 =head1 DESCRIPTION
 
-Model the what, who, when, and why of actions performed in The Goo.
+Store who performed an action, when they did it, and to which Thing.
 
 =head1 METHODS
 
@@ -154,11 +154,11 @@ Model the what, who, when, and why of actions performed in The Goo.
 
 =item new
 
-construct a goo_action object
+constructor
 
 =item get_action
 
-return the description of the action performed
+Return the description of the action performed
 
 =item get_user
 
@@ -170,7 +170,7 @@ when did they do the action?
 
 =item get_short_thing
 
-return the short name of the Thing they did the action on?
+eturn the short name of the Thing they did the action on?
 
 =item get_thing
 

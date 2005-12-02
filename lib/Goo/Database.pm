@@ -516,7 +516,7 @@ __END__
 
 =head1 NAME
 
-Goo::Database - This script connects to an MySQL database and executes queries
+Goo::Database - Interface to a MySQL database via DBI
 
 =head1 SYNOPSIS
 
@@ -536,7 +536,7 @@ open a connection to the default database
 
 =item do_sql
 
-execute some sql
+execute some SQL
 
 =item do_query
 
@@ -544,11 +544,11 @@ execute sql and return the result all in one
 
 =item generate_numeric_sqlin_clause
 
-return an sql 'in' clause with numeric values
+return an SQL 'in' clause with numeric values
 
 =item generate_string_sqlin_clause
 
-return an sql 'in' clause with string values
+return an SQL 'in' clause with string values
 
 =item get_number_of_rows
 
@@ -629,7 +629,6 @@ return a list of column names for the table
 =item get_date
 
 return the date and time according to the database
-
 
 =back
 

@@ -205,7 +205,7 @@ __END__
 
 =head1 NAME
 
-Goo::Loader - Load a Thing from Goo Space
+Goo::Loader - Load a Thing from Goo space
 
 =head1 SYNOPSIS
 

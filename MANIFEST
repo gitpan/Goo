@@ -2,7 +2,6 @@ bin/goo
 bin/goo.pl
 Changes
 lib/Goo/Action.pm
-lib/Goo/Action.pm.save
 lib/Goo/BackLinkFinder.pm
 lib/Goo/BackLinkManager.pm
 lib/Goo/CareOMeter.pm
@@ -60,12 +59,9 @@ lib/Goo/TextEditor.pm
 lib/Goo/TextTable.pm
 lib/Goo/TextUtilities.pm
 lib/Goo/ThereDocManager.pm
-lib/Goo/Thing/bug/buglist.pl
-lib/Goo/Thing/bug/editbug.pl
 lib/Goo/Thing/bug/Fixer.pm
 lib/Goo/Thing/bug/Lister.pm
 lib/Goo/Thing/bug/Maker.pm
-lib/Goo/Thing/bug/savebug.pl
 lib/Goo/Thing/conf/ConfigProfiler.pm
 lib/Goo/Thing/conf/studly-method-remover.pl
 lib/Goo/ThingFinder.pm
@@ -124,9 +120,6 @@ lib/Goo/Thing/task/savetask.pl
 lib/Goo/Thing/task/TaskEditor.pm
 lib/Goo/Thing/task/TaskLister.pm
 lib/Goo/Thing/task/tasklist.pl
-lib/Goo/Thing/tpl/GMLEditor.pm
-lib/Goo/Thing/tpl/GMLMaker.pm
-lib/Goo/Thing/tpl/GMLProfiler.pm
 lib/Goo/Thing/tpm/Tester.pm
 lib/Goo/Thing/tpm/TestLoader.pm
 lib/Goo/Thing/tpm/TestMaker.pm
@@ -146,7 +139,6 @@ README
 skel/auto/Goo/.exists
 skel/.exists
 skel/Goo/Action.pm
-skel/Goo/Action.pm.save
 skel/Goo/BackLinkFinder.pm
 skel/Goo/BackLinkManager.pm
 skel/Goo/CareOMeter.pm

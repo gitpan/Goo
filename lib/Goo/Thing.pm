@@ -216,13 +216,20 @@ __END__
 
 =head1 NAME
 
-Goo::Thing - A new generic type of "Thing" in The Goo based on global config
+Goo::Thing - A "Thing" in your working environment that you can do actions to
 
 =head1 SYNOPSIS
 
 use Goo::Thing;
 
 =head1 DESCRIPTION
+
+A "Thing" is something you perform actions on in your working environment. It could be a file, a database entity or
+configuration file. 
+
+Everytime you perform an action on a Thing it is recorded in the Goo Trail. 
+
+The Goo Trail records all your temporal associations between Things in your environment.
 
 =head1 METHODS
 
@@ -234,7 +241,7 @@ construct a Thing
 
 =item get_filename
 
-all Things must have a "filename" - even database Things!
+all Things must have a "filename" or "handle" - even database Things!
 
 =item get_suffix
 
@@ -263,4 +270,10 @@ execute the action
 Nigel Hamilton <nigel@trexy.com>
 
 =head1 SEE ALSO
+
+Tour    http://thegoo.org/goo-tour.pdf (big)
+
+Web     http://thegoo.org
+
+Blog    http://blog.thegoo.org
 

@@ -123,7 +123,7 @@ __END__
 
 =head1 NAME
 
-Goo::JumpManager - Jumping to a specific line in the program
+Goo::JumpManager - Jump to a specific line, string or another Thing
 
 =head1 SYNOPSIS
 
