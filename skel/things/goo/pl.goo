@@ -22,6 +22,5 @@ Care[O]Meter =	Goo::CareOMeter.pm
 #[T]est		= 	Goo::Thing::pl::ProgramTester
 # [M]ake		=	Goo::Thing::pl::ScriptMaker.pm
 
-location	=	util
 location	=	bin
 location	=	Goo

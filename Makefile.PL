@@ -10,6 +10,8 @@ WriteMakefile(
     VERSION_FROM        => 'lib/Goo.pm',
     PL_FILES            => {},
     EXE_FILES           => [ 'bin/goo.pl' ],
+    INST_LIB            => './skel',
+    INSTALLSITELIB      => '/usr/lib/Goo',
     PREREQ_PM => {
         'CGI'               => 0,
         'Config::Auto'      => 0,
