@@ -19,12 +19,14 @@ package Goo::FileUtilities;
 # 01/07/2005    Added getPath - smarter regex handling
 # 01/07/2005    Added getSuffix
 # 17/10/2005    Added method: getCWD
+# 02/12/2005    Added getLastLines - tail replacement
 #
 ###############################################################################
 
 use strict;
 
 use Cwd;
+use File::Spec;
 use File::stat;
 
 ###############################################################################
@@ -246,9 +248,11 @@ sub get_path {
 
     my ($filename) = @_;
 
-    $filename =~ m/(.*)\//;
+    my ($volume, $directories, $file) = File::Spec->splitpath($filename);
 
-    return $1;
+    my $path = File::Spec->catpath($volume, $directories);
+
+    return $path;
 
 }
 
@@ -275,6 +279,27 @@ sub slurp {
 sub get_cwd {
 
     return getcwd();
+
+}
+
+###############################################################################
+#
+# get_last_lines - return the n last lines from a file
+#
+###############################################################################
+
+sub get_last_lines {
+
+    my ($filename, $n) = @_;
+
+    # set default number of lines
+    $n ||= 10;
+
+    ###TODO### could be rewriten to only hold $n lines at one time
+
+    my @lines = get_file_as_lines($filename);
+
+    return split(@lines, -$n, $n);
 
 }
 
@@ -350,6 +375,10 @@ Perl6 synonym for get_file_as_string
 =item get_cwd
 
 return the current working directory
+
+=item get_last_lines
+
+return the last n lines from a file
 
 =back
 

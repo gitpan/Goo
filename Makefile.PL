@@ -33,6 +33,6 @@ WriteMakefile(
         'Text::FormatTable' => 0,
         'Time::HiRes'       => 0,
     },
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'Goo-*' },
+    dist     => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    clean    => { FILES => 'Goo-*' },
 );

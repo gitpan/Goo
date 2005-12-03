@@ -13,6 +13,7 @@ package Goo::Thing::log::Profiler;
 # Date          Change
 # -----------------------------------------------------------------------------
 # 15/10/2005    Version 1
+# 02/12/2005    Removed backticks in run (/usr/bin/tail)
 #
 ###############################################################################
 
@@ -48,9 +49,9 @@ sub run {
         $profile->set_description("Tail of $log_file_location");
 
         # grab the tail of the log
-        my $log_tail = `/usr/bin/tail -6 $log_file_location`;
+        my @log_tail = Goo::FileUtilities::get_last_lines($log_file_location, 6);
 
-        $profile->add_rendered_table($log_tail);
+        $profile->add_rendered_table(join("\n", $log_tail));
 
         # add a list of Things found in this Thing
         $profile->add_things_table($log_tail);

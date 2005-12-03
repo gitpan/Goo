@@ -36,6 +36,7 @@ package Goo;
 
 use strict;
 
+use File::Grep  qw(fdo);
 use File::NCopy qw(copy);
 
 use Goo::Object;
@@ -46,7 +47,7 @@ use Goo::LiteDatabase;
 
 use base qw(Goo::Object);
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 
 ###############################################################################
@@ -57,37 +58,37 @@ our $VERSION = '0.08';
 
 sub check_environment {
 
-    # store the DB in ~/.goo
-    my $database_directory = $ENV{HOME} . "/.goo";
+    my $db_directory = "$ENV{HOME}/.goo";              # store the DB in ~/.goo
+    my $db_file      = "$db_directory/goo-trail.db";   # in the file goo-trail.db
 
-    # in the file goo-trail.db
-    my $database_file = $database_directory . "/goo-trail.db";
-
-    if (-e $database_file) {
-
-        # establish the connection to the database and bail out
-        Goo::LiteDatabase::get_connection($database_file);
-        return;
+    if (-e $db_file) {                                 # datbase file is present
+        Goo::LiteDatabase::get_connection($db_file);   # connect to db 
+        return;                                        # and bail out
     }
 
     # no database yet - let's make one?
     # check if the ~/.goo directory is present?
-    if (!-d $database_directory) {    		# if there is no directory
-        if (-e $database_directory) {   	# but a file with the name .goo
-            rename $database_directory, "$database_directory.wtf";    # move it
+    if (!-d $db_directory) {    		       # if there is no directory
+        if (-e $db_directory) {   	               # but a file with the name .goo
+            rename $db_directory, "$db_directory.wtf"; # move it
         }
 
-		# make the directory
-        mkdir $database_directory;      
+	print "~/.goo directory was not present, so I will create one now\n";
+	print "and populate it with common things. You can customize it later.\n";
 
-        # so this is our 1st time invocation: copy files from skeletton
-        copy(\1, '/usr/lib/Goo/*', $database_directory);
+        mkdir $db_directory;                 # make the ~/.goo directory
+	for(@INC) {                          # lookup all @INC directories
+	    if(-e "$_/.gooskel") {           # if we found the goo skeletton dir
+		copy(\1, "$_/.gooskel/*", $db_directory);
+		last;
+	    }
+	}
     }
 
-    close DATA if (open DATA, ">>$database_file"); # make the db file ("touch")
+    close DATA if (open DATA, ">>$db_file"); # make the db file ("touch")
 
     # connect to the database for the first time
-    Goo::LiteDatabase::get_connection($database_file);
+    Goo::LiteDatabase::get_connection($db_file);
 
     # create all the tables
     Goo::TrailManager::create_database();

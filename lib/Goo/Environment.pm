@@ -17,6 +17,7 @@ package Goo::Environment;
 # 02/02/2005    Detect if we are in a CGI environment
 # 06/02/2005    Added test to see if this is a cronjob
 # 15/08/2005    Added method: getUser
+# 02/12/2005    Removed backticks from getIPAddress
 #
 ###############################################################################
 
@@ -74,11 +75,15 @@ sub get_ipaddress {
 
     my ($this) = @_;
 
-    my $hostname = `hostname -i`;
+    require Socket;
+    require Sys::Hostname;
 
-    $hostname =~ s/\s+//g;
+    my $hostname   = Sys::Hostname::hostname();
+    my $ip_address = Socket::inet_ntoa(scalar gethostbyname($hostname ||
+                                                            'localhost')
+                                      );
 
-    return $hostname;
+    return $ip_address;
 
 }
 
